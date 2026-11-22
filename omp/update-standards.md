@@ -7,7 +7,8 @@ The only file you edit is `data/standards.json`. Never edit `index.html`, `scrip
 Count it only if it meets all three tests:
 - It is a protocol, spec, file convention, API shape, data format or certification framework built for AI systems or agents.
 - Other parties can implement it. It is published openly, or it sits with a standards body or foundation.
-- A tech company or standards body backs it publicly: AAIF/Linux Foundation, IETF, W3C, FIDO, OpenID, C2PA, CNCF, ISO, NIST, or companies like OpenAI, Anthropic, Google, Microsoft, AWS, Meta, Apple, Nvidia, Stripe, Shopify, Salesforce, IBM, Cisco, Cloudflare, Visa, Mastercard, PayPal, Coinbase, Okta, Hugging Face, Alibaba.
+- A tech company or standards body backs it publicly: AAIF/Linux Foundation, IETF, W3C, FIDO, OpenID, C2PA, CNCF, ISO, NIST, or companies like OpenAI, Anthropic, Google, Microsoft, AWS, Meta, Apple, Nvidia, Stripe, Shopify, Salesforce, IBM, Cisco, Cloudflare, Visa, Mastercard, PayPal, Coinbase, Okta, Hugging Face, Alibaba, Zed, JetBrains, Docker, Oracle, SAP, ServiceNow, Databricks, Snowflake, OpenSSF, CoSAI, OWASP, MLCommons, MITRE.
+- Security and supply-chain specs for AI (model signing, AIBOM, risk catalogs) count too; use the "Security and supply chain" layer.
 
 Don't count:
 - products, SDKs that only call one vendor's API, models, benchmarks, or marketing posts with no spec

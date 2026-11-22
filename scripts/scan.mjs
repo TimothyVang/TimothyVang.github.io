@@ -15,6 +15,8 @@ const GITHUB_ORGS = [
   'aws', 'awslabs', 'stripe', 'Shopify', 'salesforce', 'ibm', 'cisco', 'agntcy', 'meta-llama', 'facebookresearch',
   'NVIDIA', 'cloudflare', 'coinbase', 'paypal', 'visa', 'mastercard', 'huggingface', 'alibaba', 'block', 'okta',
   'vercel', 'open-telemetry', 'c2pa-org', 'aaif', 'ag-ui-protocol', 'nlweb-ai', 'webmachinelearning', 'x402-foundation',
+  'zed-industries', 'agentclientprotocol', 'JetBrains', 'docker', 'sigstore', 'ossf', 'cosai-oasis', 'CycloneDX',
+  'spdx', 'mlcommons', 'OWASP', 'apple', 'oracle', 'SAP', 'ServiceNow', 'databricks', 'snowflakedb', 'langchain-ai',
 ];
 
 const FEEDS = {
@@ -34,6 +36,14 @@ const FEEDS = {
   'W3C': 'https://www.w3.org/blog/news/feed/',
   'FIDO Alliance': 'https://fidoalliance.org/feed/',
   'OpenID Foundation': 'https://openid.net/feed/',
+  'Zed': 'https://zed.dev/blog.rss',
+  'JetBrains AI': 'https://blog.jetbrains.com/ai/feed/',
+  'OpenSSF': 'https://openssf.org/feed/',
+  'CoSAI': 'https://www.coalitionforsecureai.org/feed/',
+  'NVIDIA Newsroom': 'https://nvidianews.nvidia.com/rss',
+  'Anthropic (GitHub releases)': 'https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom',
+  'A2A releases': 'https://github.com/a2aproject/A2A/releases.atom',
+  'IETF agentproto': 'https://datatracker.ietf.org/feed/group-changes/agentproto/',
 };
 
 const AI = /\b(ai|agent|agents|agentic|llm|model context|mcp|a2a|genai|gen_ai)\b/i;

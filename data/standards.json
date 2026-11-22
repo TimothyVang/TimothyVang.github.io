@@ -8,70 +8,1199 @@
     "Web and content",
     "Observability",
     "Model formats and APIs",
-    "Governance"
+    "Governance",
+    "Security and supply chain"
   ],
   "standards": [
-    { "id": "mcp", "name": "Model Context Protocol (MCP)", "layer": "Agent protocols", "backers": ["Anthropic", "OpenAI", "Google", "Microsoft", "AWS"], "body": "AAIF (Linux Foundation)", "status": "Spec 2026-07-28; founding AAIF project", "summary": "Connects agents to tools, data and prompts.", "url": "https://modelcontextprotocol.io", "added": "2026-11-22", "verified": true },
-    { "id": "a2a", "name": "Agent2Agent (A2A)", "layer": "Agent protocols", "backers": ["Google", "Salesforce", "SAP", "ServiceNow", "IBM", "Microsoft"], "body": "AAIF (Linux Foundation)", "status": "v1.0.1 patch May 2026; joined AAIF Aug 17, 2026", "summary": "Agents discover each other, hand off tasks and exchange messages.", "url": "https://a2a-protocol.org", "added": "2026-11-22", "verified": true },
-    { "id": "agents-md", "name": "AGENTS.md", "layer": "Agent protocols", "backers": ["OpenAI", "Google", "Cursor", "Factory"], "body": "AAIF (Linux Foundation)", "status": "Founding AAIF project (Dec 2025)", "summary": "One instruction file for coding agents at the root of a repo.", "url": "https://agents.md", "added": "2026-11-22", "verified": true },
-    { "id": "agent-skills", "name": "Agent Skills (SKILL.md)", "layer": "Agent protocols", "backers": ["Anthropic", "OpenAI", "Microsoft"], "body": "AAIF (Linux Foundation)", "status": "Joined AAIF Oct 22, 2026", "summary": "Folders of instructions and scripts an agent loads on demand.", "url": "https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects", "added": "2026-11-22", "verified": true },
-    { "id": "open-responses", "name": "Open Responses", "layer": "Model formats and APIs", "backers": ["OpenAI"], "body": "AAIF (Linux Foundation)", "status": "Joined AAIF Oct 22, 2026", "summary": "Open spec for the Responses-style model API.", "url": "https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects", "added": "2026-11-22", "verified": true },
-    { "id": "openenv", "name": "OpenEnv", "layer": "Agent protocols", "backers": ["Hugging Face", "Meta"], "body": "AAIF (Linux Foundation)", "status": "Joined AAIF Oct 22, 2026", "summary": "Standard environments for agent RL training and evals.", "url": "https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects", "added": "2026-11-22", "verified": true },
-    { "id": "opensandbox", "name": "OpenSandbox", "layer": "Agent protocols", "backers": ["Alibaba"], "body": "AAIF (Linux Foundation)", "status": "Joined AAIF Oct 22, 2026", "summary": "Sandboxes where agents run code safely.", "url": "https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects", "added": "2026-11-22", "verified": true },
-    { "id": "agentgateway", "name": "agentgateway", "layer": "Agent protocols", "backers": ["Solo.io", "Microsoft", "AWS"], "body": "AAIF (Linux Foundation)", "status": "AAIF project (reported Jun 2026)", "summary": "Gateway and proxy for MCP and A2A traffic.", "url": "https://agentgateway.dev", "added": "2026-11-22", "verified": false },
-    { "id": "goose", "name": "goose", "layer": "Agent protocols", "backers": ["Block"], "body": "AAIF (Linux Foundation)", "status": "Founding AAIF project (Dec 2025)", "summary": "Reference open-source agent built on MCP.", "url": "https://github.com/block/goose", "added": "2026-11-22", "verified": true },
-    { "id": "agntcy", "name": "AGNTCY", "layer": "Agent protocols", "backers": ["Cisco", "Dell Technologies", "Google", "Oracle", "Red Hat"], "body": "Linux Foundation", "status": "Linux Foundation project since Jul 29, 2025; AAIF proposal pending", "summary": "Provides open specifications for agent discovery, identity, messaging and observability.", "url": "https://agntcy.org", "added": "2026-11-22", "verified": true },
-    { "id": "ibm-acp", "name": "Agent Communication Protocol (IBM ACP)", "layer": "Agent protocols", "backers": ["IBM"], "body": "LF AI & Data (Linux Foundation)", "status": "Merger into A2A announced Aug 25, 2025; standalone repo archived", "summary": "IBM Research's open REST protocol for discovering agents and exchanging messages was superseded by A2A.", "url": "https://agentcommunicationprotocol.dev", "added": "2026-11-22", "verified": true },
-    { "id": "personal-agent-protocol", "name": "Personal Agent Protocol (Poppy)", "layer": "Agent protocols", "backers": ["Sierra", "Meta", "Shopify", "Stripe", "Salesforce"], "body": "Sierra and Meta", "status": "v1.0 released Nov 13, 2026", "summary": "Lets personal AI agents discover and use a company's website, APIs or agent with the user's permission.", "url": "https://personalagentprotocol.org/docs/1.0/spec", "added": "2026-11-22", "verified": true },
-    { "id": "agentic-resource-discovery", "name": "Agentic Resource Discovery (ARD)", "layer": "Agent protocols", "backers": ["Google", "Hugging Face", "Microsoft", "GoDaddy"], "body": "Agentic Resource Discovery working group", "status": "Proposal v0.91 (Aug 26, 2026)", "summary": "Defines how AI clients discover tools, skills, APIs and agents across independent registries.", "url": "https://agenticresourcediscovery.org/spec/", "added": "2026-11-22", "verified": true },
-    { "id": "agent-transfer-protocol", "name": "Agent Transfer Protocol (AGTP)", "layer": "Agent protocols", "backers": ["Nomotic"], "body": "Nomotic", "status": "Individual draft -10 Oct 30, 2026; MCP mapping draft Nov 22, 2026", "summary": "Defines a transfer protocol that carries signed agent identity and delegation and has a draft mapping for MCP.", "url": "https://datatracker.ietf.org/doc/draft-hood-independent-agtp/", "added": "2026-11-22", "verified": true },
-    { "id": "llama-stack", "name": "Llama Stack API", "layer": "Model formats and APIs", "backers": ["Meta"], "body": "Meta (open source)", "status": "Open source", "summary": "Standard API surface for inference, agents, safety and evals on Llama.", "url": "https://github.com/meta-llama/llama-stack", "added": "2026-11-22", "verified": false },
-
-    { "id": "mcp-apps", "name": "MCP Apps", "layer": "Agent UI", "backers": ["Anthropic", "OpenAI"], "body": "MCP project (AAIF)", "status": "First official MCP extension; stable 2026-01-26", "summary": "MCP servers render interactive UI inside the host chat.", "url": "https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/", "added": "2026-11-22", "verified": true },
-    { "id": "apps-sdk", "name": "OpenAI Apps SDK", "layer": "Agent UI", "backers": ["OpenAI"], "body": "OpenAI", "status": "Production; fed into MCP Apps", "summary": "ChatGPT in-chat apps built on MCP.", "url": "https://developers.openai.com/apps-sdk", "added": "2026-11-22", "verified": true },
-    { "id": "a2ui", "name": "A2UI", "layer": "Agent UI", "backers": ["Google"], "body": "Google (open source)", "status": "First stable version v1.0 released Nov 11, 2026", "summary": "Lets agents describe interactive interfaces that apps render with native components.", "url": "https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences", "added": "2026-11-22", "verified": true },
-    { "id": "ag-ui", "name": "AG-UI", "layer": "Agent UI", "backers": ["CopilotKit", "Microsoft", "AWS"], "body": "CopilotKit-led AG-UI project", "status": "v1.0 stable Sep 18, 2026; v1.1 draft", "summary": "Connects agents to user-facing apps through a typed event stream for messages, tool calls and state.", "url": "https://docs.ag-ui.com/spec/1.0", "added": "2026-11-22", "verified": true },
-
-    { "id": "acp-commerce", "name": "Agentic Commerce Protocol (ACP)", "layer": "Commerce and payments", "backers": ["OpenAI", "Stripe", "Shopify", "Etsy"], "body": "OpenAI and Stripe", "status": "Spec beta; now mostly product feeds in ChatGPT", "summary": "Checkout and product feeds between agents and merchants.", "url": "https://www.agenticcommerce.dev", "added": "2026-11-22", "verified": true },
-    { "id": "stripe-spt", "name": "Shared Payment Tokens", "layer": "Commerce and payments", "backers": ["Stripe"], "body": "Stripe", "status": "Production (part of ACP)", "summary": "Scoped, single-use payment credentials an agent passes to a merchant.", "url": "https://docs.stripe.com/agentic-commerce", "added": "2026-11-22", "verified": false },
-    { "id": "mpp", "name": "Machine Payments Protocol (MPP)", "layer": "Commerce and payments", "backers": ["Stripe", "Tempo", "Visa"], "body": "MPP project (Tempo and Stripe)", "status": "Launched Mar 18, 2026; individual Internet-Draft -01 Sep 9, 2026", "summary": "Lets agents and services exchange HTTP 402 payment requests, credentials and receipts across payment rails.", "url": "https://mpp.dev/", "added": "2026-11-22", "verified": true },
-    { "id": "ucp", "name": "Universal Commerce Protocol (UCP)", "layer": "Commerce and payments", "backers": ["Google", "Shopify", "Walmart", "Target"], "body": "Google and Shopify", "status": "Spec 2026-08-25", "summary": "Discovery, cart, checkout and after-sales for agent shoppers.", "url": "https://ucp.dev/latest/specification/overview/", "added": "2026-11-22", "verified": true },
-    { "id": "ap2", "name": "Agent Payments Protocol (AP2)", "layer": "Commerce and payments", "backers": ["Google", "PayPal", "Mastercard", "American Express", "Adyen", "Coinbase"], "body": "FIDO Alliance", "status": "v0.2.0; contributed to FIDO Apr 28, 2026", "summary": "Signed mandates proving a human authorized an agent payment.", "url": "https://ap2-protocol.org", "added": "2026-11-22", "verified": true },
-    { "id": "verifiable-intent", "name": "Verifiable Intent", "layer": "Commerce and payments", "backers": ["Mastercard", "Google"], "body": "FIDO Alliance Payments Technical Working Group", "status": "Contributed Apr 2026; live Antom transaction announced Nov 19, 2026", "summary": "Binds cardholder intent to an agent purchase.", "url": "https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/", "added": "2026-11-22", "verified": true },
-    { "id": "mastercard-agent-pay", "name": "Mastercard Agent Pay", "layer": "Commerce and payments", "backers": ["Mastercard"], "body": "Mastercard", "status": "Network program", "summary": "Agentic tokens registered to a verified agent.", "url": "https://www.mastercard.com/news/press/2025/april/mastercard-unveils-agent-pay-pioneering-agentic-payments-technology-to-power-commerce-in-the-age-of-ai/", "added": "2026-11-22", "verified": false },
-    { "id": "visa-tap", "name": "Trusted Agent Protocol (TAP)", "layer": "Commerce and payments", "backers": ["Visa", "Cloudflare"], "body": "Visa", "status": "Visa Intelligent Commerce program", "summary": "Merchants verify a trusted agent using HTTP message signatures.", "url": "https://developer.visa.com", "added": "2026-11-22", "verified": false },
-    { "id": "x402", "name": "x402", "layer": "Commerce and payments", "backers": ["Coinbase", "Cloudflare", "Stripe", "Google"], "body": "x402 Foundation (Linux Foundation)", "status": "v2 Dec 2025; foundation operational Jul 14, 2026", "summary": "Lets agents and applications pay for APIs and other resources using HTTP 402 and extensible payment schemes.", "url": "https://x402.org/", "added": "2026-11-22", "verified": true },
-
-    { "id": "wimse-agent-auth", "name": "AI Identity Management System (AIMS)", "layer": "Identity and auth", "backers": ["IETF WIMSE WG"], "body": "IETF", "status": "Working-group draft -01 (Nov 2, 2026)", "summary": "Describes how to apply OAuth and workload identity standards to authenticate and authorize AI agents.", "url": "https://datatracker.ietf.org/doc/draft-ietf-wimse-aims/", "added": "2026-11-22", "verified": true },
-    { "id": "oauth-agent-grants", "name": "OAuth agent grants", "layer": "Identity and auth", "backers": ["IETF (individual)"], "body": "IETF", "status": "Draft -02, Aug 2026", "summary": "Delegated agent authorization on RFC 8693 token exchange.", "url": "https://datatracker.ietf.org/doc/draft-mishra-oauth-agent-grants/", "added": "2026-11-22", "verified": true },
-    { "id": "oauth-agent-instance", "name": "OAuth AI agent instance profile", "layer": "Identity and auth", "backers": ["IETF (individual)"], "body": "IETF", "status": "Draft -00, Jul 2026", "summary": "Many agent instances under one OAuth client.", "url": "https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-ai-agent-instance-00", "added": "2026-11-22", "verified": true },
-    { "id": "xaa", "name": "Cross App Access (ID-JAG)", "layer": "Identity and auth", "backers": ["Okta", "Anthropic"], "body": "IETF OAuth WG", "status": "Draft; MCP auth extension", "summary": "Enterprise IdP grants an agent access to another app without per-app consent.", "url": "https://datatracker.ietf.org/doc/draft-ietf-oauth-identity-assertion-authz-grant/", "added": "2026-11-22", "verified": false },
-    { "id": "web-bot-auth", "name": "Web Bot Auth", "layer": "Identity and auth", "backers": ["Cloudflare", "Visa", "Amazon"], "body": "IETF", "status": "Draft", "summary": "Bots and agents sign HTTP requests so sites can verify them.", "url": "https://datatracker.ietf.org/wg/webbotauth/about/", "added": "2026-11-22", "verified": false },
-    { "id": "oidf-aiim", "name": "OpenID AI Identity Management", "layer": "Identity and auth", "backers": ["OpenID Foundation"], "body": "OpenID Foundation", "status": "Whitepaper; Authority Claims extension in progress", "summary": "Agent identity plus a record of who delegated authority.", "url": "https://openid.net/cg/artificial-intelligence-identity-management-community-group/", "added": "2026-11-22", "verified": true },
-    { "id": "agent-name-service", "name": "Agent Name Service (ANS)", "layer": "Identity and auth", "backers": ["GoDaddy", "Cisco", "Cloudflare", "DigiCert", "Salesforce"], "body": "Linux Foundation", "status": "Draft specs; Linux Foundation project since Nov 10, 2026", "summary": "Uses DNS and certificates to name, discover and verify AI agents.", "url": "https://ansinfo.ai/docs/", "added": "2026-11-22", "verified": true },
-    { "id": "nist-agent", "name": "NIST AI Agent Standards Initiative", "layer": "Governance", "backers": ["NIST"], "body": "NIST", "status": "Launched Feb 17, 2026 (secondary source)", "summary": "US government program on agent standards.", "url": "https://www.nist.gov", "added": "2026-11-22", "verified": false },
-
-    { "id": "webmcp", "name": "WebMCP", "layer": "Web and content", "backers": ["Google", "Microsoft"], "body": "W3C Web Machine Learning Community Group", "status": "Draft Community Group Report (Nov 19, 2026)", "summary": "Lets a web page expose JavaScript tools to browser agents.", "url": "https://webmachinelearning.github.io/webmcp", "added": "2026-11-22", "verified": true },
-    { "id": "nlweb", "name": "NLWeb", "layer": "Web and content", "backers": ["Microsoft"], "body": "Microsoft (open source)", "status": "Open source; no public deployment count", "summary": "Natural-language query endpoint for a website, built on MCP.", "url": "https://github.com/nlweb-ai/NLWeb", "added": "2026-11-22", "verified": true },
-    { "id": "llms-txt", "name": "llms.txt", "layer": "Web and content", "backers": ["Community", "Mintlify", "Anthropic"], "body": "Community proposal", "status": "About 10% of sites; no lab confirms reading it", "summary": "Markdown site map written for LLMs.", "url": "https://llmstxt.org", "added": "2026-11-22", "verified": true },
-    { "id": "aipref", "name": "AI Preferences (AIPREF)", "layer": "Web and content", "backers": ["IETF"], "body": "IETF", "status": "Working group", "summary": "AI-use preferences in robots.txt and HTTP headers.", "url": "https://datatracker.ietf.org/wg/aipref/about/", "added": "2026-11-22", "verified": false },
-    { "id": "c2pa", "name": "C2PA / Content Credentials", "layer": "Web and content", "backers": ["Adobe", "Microsoft", "Google", "OpenAI", "Meta", "Amazon", "Sony"], "body": "C2PA", "status": "Spec 2.5 (Oct 2026)", "summary": "Defines signed provenance records for media, including AI-generated content.", "url": "https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html", "added": "2026-11-22", "verified": true },
-    { "id": "synthid", "name": "SynthID", "layer": "Web and content", "backers": ["Google"], "body": "Google", "status": "Proprietary; text version open-sourced", "summary": "Invisible watermark on AI output.", "url": "https://deepmind.google/technologies/synthid/", "added": "2026-11-22", "verified": false },
-
-    { "id": "vcon-agent-session", "name": "vCon Agent Session", "layer": "Observability", "backers": ["Vconic"], "body": "vcon-dev", "status": "Project draft v0.1.0 May 20, 2026; individual I-D expired Nov 21, 2026", "summary": "Embeds an AI agent's execution trace in the same signed vCon record as its conversation.", "url": "https://github.com/vcon-dev/draft-howe-vcon-agent-session/releases/tag/v0.1.0", "added": "2026-11-22", "verified": true },
-    { "id": "otel-genai", "name": "OpenTelemetry GenAI semantic conventions", "layer": "Observability", "backers": ["Microsoft", "Google", "AWS", "Datadog", "Elastic"], "body": "CNCF OpenTelemetry", "status": "Development; gen_ai.system renamed gen_ai.provider.name", "summary": "Standard trace attributes for LLM and agent calls.", "url": "https://github.com/open-telemetry/semantic-conventions", "added": "2026-11-22", "verified": true },
-
-    { "id": "chat-completions", "name": "OpenAI-compatible Chat Completions API", "layer": "Model formats and APIs", "backers": ["OpenAI", "Google", "Mistral", "Groq", "Together", "vLLM"], "body": "De facto", "status": "De facto standard", "summary": "The request shape nearly every model server accepts.", "url": "https://platform.openai.com/docs/api-reference/chat", "added": "2026-11-22", "verified": false },
-    { "id": "onnx", "name": "ONNX", "layer": "Model formats and APIs", "backers": ["Microsoft", "Meta", "AMD", "Nvidia"], "body": "LF AI and Data", "status": "Stable", "summary": "Portable model graph format.", "url": "https://onnx.ai", "added": "2026-11-22", "verified": false },
-    { "id": "safetensors", "name": "safetensors", "layer": "Model formats and APIs", "backers": ["Hugging Face"], "body": "Hugging Face (PyTorch Foundation)", "status": "Stable", "summary": "Safe, fast format for model weights.", "url": "https://github.com/huggingface/safetensors", "added": "2026-11-22", "verified": false },
-    { "id": "gguf", "name": "GGUF", "layer": "Model formats and APIs", "backers": ["llama.cpp", "Ollama"], "body": "Community", "status": "Stable", "summary": "Quantized model format for local inference.", "url": "https://github.com/ggml-org/ggml/blob/master/docs/gguf.md", "added": "2026-11-22", "verified": false },
-
-    { "id": "iso-42001", "name": "ISO/IEC 42001", "layer": "Governance", "backers": ["Microsoft", "Google", "AWS", "Anthropic"], "body": "ISO/IEC", "status": "Published 2023; certifications held", "summary": "AI management system standard.", "url": "https://www.iso.org/standard/81230.html", "added": "2026-11-22", "verified": false },
-    { "id": "nist-ai-rmf", "name": "NIST AI RMF", "layer": "Governance", "backers": ["NIST"], "body": "NIST", "status": "Voluntary framework", "summary": "AI risk management framework.", "url": "https://www.nist.gov/itl/ai-risk-management-framework", "added": "2026-11-22", "verified": false },
-    { "id": "eu-gpai-code", "name": "EU AI Act GPAI Code of Practice", "layer": "Governance", "backers": ["OpenAI", "Anthropic", "Google", "Microsoft", "Amazon"], "body": "European Commission", "status": "Signed by most frontier labs", "summary": "Obligations for general-purpose AI model providers.", "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai", "added": "2026-11-22", "verified": false }
+    {
+      "id": "mcp",
+      "name": "Model Context Protocol (MCP)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Anthropic",
+        "OpenAI",
+        "Google",
+        "Microsoft",
+        "AWS"
+      ],
+      "body": "AAIF (Linux Foundation)",
+      "status": "Spec 2026-07-28; founding AAIF project",
+      "summary": "Connects agents to tools, data and prompts.",
+      "url": "https://modelcontextprotocol.io",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "a2a",
+      "name": "Agent2Agent (A2A)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Google",
+        "Salesforce",
+        "SAP",
+        "ServiceNow",
+        "IBM",
+        "Microsoft"
+      ],
+      "body": "AAIF (Linux Foundation)",
+      "status": "v1.0.1 patch May 2026; joined AAIF Aug 17, 2026",
+      "summary": "Agents discover each other, hand off tasks and exchange messages.",
+      "url": "https://a2a-protocol.org",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "agents-md",
+      "name": "AGENTS.md",
+      "layer": "Agent protocols",
+      "backers": [
+        "OpenAI",
+        "Google",
+        "Cursor",
+        "Factory"
+      ],
+      "body": "AAIF (Linux Foundation)",
+      "status": "Founding AAIF project (Dec 2025)",
+      "summary": "One instruction file for coding agents at the root of a repo.",
+      "url": "https://agents.md",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "agent-skills",
+      "name": "Agent Skills (SKILL.md)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Anthropic",
+        "OpenAI",
+        "Microsoft"
+      ],
+      "body": "AAIF (Linux Foundation)",
+      "status": "Joined AAIF Oct 22, 2026",
+      "summary": "Folders of instructions and scripts an agent loads on demand.",
+      "url": "https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "open-responses",
+      "name": "Open Responses",
+      "layer": "Model formats and APIs",
+      "backers": [
+        "OpenAI"
+      ],
+      "body": "AAIF (Linux Foundation)",
+      "status": "Joined AAIF Oct 22, 2026",
+      "summary": "Open spec for the Responses-style model API.",
+      "url": "https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "openenv",
+      "name": "OpenEnv",
+      "layer": "Agent protocols",
+      "backers": [
+        "Hugging Face",
+        "Meta"
+      ],
+      "body": "AAIF (Linux Foundation)",
+      "status": "Joined AAIF Oct 22, 2026",
+      "summary": "Standard environments for agent RL training and evals.",
+      "url": "https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "opensandbox",
+      "name": "OpenSandbox",
+      "layer": "Agent protocols",
+      "backers": [
+        "Alibaba"
+      ],
+      "body": "AAIF (Linux Foundation)",
+      "status": "Joined AAIF Oct 22, 2026",
+      "summary": "Sandboxes where agents run code safely.",
+      "url": "https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "agentgateway",
+      "name": "agentgateway",
+      "layer": "Agent protocols",
+      "backers": [
+        "Solo.io",
+        "Microsoft",
+        "AWS"
+      ],
+      "body": "AAIF (Linux Foundation)",
+      "status": "AAIF project (reported Jun 2026)",
+      "summary": "Gateway and proxy for MCP and A2A traffic.",
+      "url": "https://agentgateway.dev",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "goose",
+      "name": "goose",
+      "layer": "Agent protocols",
+      "backers": [
+        "Block"
+      ],
+      "body": "AAIF (Linux Foundation)",
+      "status": "Founding AAIF project (Dec 2025)",
+      "summary": "Reference open-source agent built on MCP.",
+      "url": "https://github.com/block/goose",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "agntcy",
+      "name": "AGNTCY",
+      "layer": "Agent protocols",
+      "backers": [
+        "Cisco",
+        "Dell Technologies",
+        "Google",
+        "Oracle",
+        "Red Hat"
+      ],
+      "body": "Linux Foundation",
+      "status": "Linux Foundation project since Jul 29, 2025; AAIF proposal pending",
+      "summary": "Provides open specifications for agent discovery, identity, messaging and observability.",
+      "url": "https://agntcy.org",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "ibm-acp",
+      "name": "Agent Communication Protocol (IBM ACP)",
+      "layer": "Agent protocols",
+      "backers": [
+        "IBM"
+      ],
+      "body": "LF AI & Data (Linux Foundation)",
+      "status": "Merger into A2A announced Aug 25, 2025; standalone repo archived",
+      "summary": "IBM Research's open REST protocol for discovering agents and exchanging messages was superseded by A2A.",
+      "url": "https://agentcommunicationprotocol.dev",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "personal-agent-protocol",
+      "name": "Personal Agent Protocol (Poppy)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Sierra",
+        "Meta",
+        "Shopify",
+        "Stripe",
+        "Salesforce"
+      ],
+      "body": "Sierra and Meta",
+      "status": "v1.0 released Nov 13, 2026",
+      "summary": "Lets personal AI agents discover and use a company's website, APIs or agent with the user's permission.",
+      "url": "https://personalagentprotocol.org/docs/1.0/spec",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "agentic-resource-discovery",
+      "name": "Agentic Resource Discovery (ARD)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Google",
+        "Hugging Face",
+        "Microsoft",
+        "GoDaddy"
+      ],
+      "body": "Agentic Resource Discovery working group",
+      "status": "Proposal v0.91 (Aug 26, 2026)",
+      "summary": "Defines how AI clients discover tools, skills, APIs and agents across independent registries.",
+      "url": "https://agenticresourcediscovery.org/spec/",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "agent-transfer-protocol",
+      "name": "Agent Transfer Protocol (AGTP)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Nomotic"
+      ],
+      "body": "Nomotic",
+      "status": "Individual draft -10 Oct 30, 2026; MCP mapping draft Nov 22, 2026",
+      "summary": "Defines a transfer protocol that carries signed agent identity and delegation and has a draft mapping for MCP.",
+      "url": "https://datatracker.ietf.org/doc/draft-hood-independent-agtp/",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "llama-stack",
+      "name": "Llama Stack API",
+      "layer": "Model formats and APIs",
+      "backers": [
+        "Meta"
+      ],
+      "body": "Meta (open source)",
+      "status": "Open source",
+      "summary": "Standard API surface for inference, agents, safety and evals on Llama.",
+      "url": "https://github.com/meta-llama/llama-stack",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "mcp-apps",
+      "name": "MCP Apps",
+      "layer": "Agent UI",
+      "backers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "body": "MCP project (AAIF)",
+      "status": "First official MCP extension; stable 2026-01-26",
+      "summary": "MCP servers render interactive UI inside the host chat.",
+      "url": "https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "apps-sdk",
+      "name": "OpenAI Apps SDK",
+      "layer": "Agent UI",
+      "backers": [
+        "OpenAI"
+      ],
+      "body": "OpenAI",
+      "status": "Production; fed into MCP Apps",
+      "summary": "ChatGPT in-chat apps built on MCP.",
+      "url": "https://developers.openai.com/apps-sdk",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "a2ui",
+      "name": "A2UI",
+      "layer": "Agent UI",
+      "backers": [
+        "Google"
+      ],
+      "body": "Google (open source)",
+      "status": "First stable version v1.0 released Nov 11, 2026",
+      "summary": "Lets agents describe interactive interfaces that apps render with native components.",
+      "url": "https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "ag-ui",
+      "name": "AG-UI",
+      "layer": "Agent UI",
+      "backers": [
+        "CopilotKit",
+        "Microsoft",
+        "AWS"
+      ],
+      "body": "CopilotKit-led AG-UI project",
+      "status": "v1.0 stable Sep 18, 2026; v1.1 draft",
+      "summary": "Connects agents to user-facing apps through a typed event stream for messages, tool calls and state.",
+      "url": "https://docs.ag-ui.com/spec/1.0",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "acp-commerce",
+      "name": "Agentic Commerce Protocol (ACP)",
+      "layer": "Commerce and payments",
+      "backers": [
+        "OpenAI",
+        "Stripe",
+        "Shopify",
+        "Etsy"
+      ],
+      "body": "OpenAI and Stripe",
+      "status": "Spec beta; now mostly product feeds in ChatGPT",
+      "summary": "Checkout and product feeds between agents and merchants.",
+      "url": "https://www.agenticcommerce.dev",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "stripe-spt",
+      "name": "Shared Payment Tokens",
+      "layer": "Commerce and payments",
+      "backers": [
+        "Stripe"
+      ],
+      "body": "Stripe",
+      "status": "Production (part of ACP)",
+      "summary": "Scoped, single-use payment credentials an agent passes to a merchant.",
+      "url": "https://docs.stripe.com/agentic-commerce",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "mpp",
+      "name": "Machine Payments Protocol (MPP)",
+      "layer": "Commerce and payments",
+      "backers": [
+        "Stripe",
+        "Tempo",
+        "Visa"
+      ],
+      "body": "MPP project (Tempo and Stripe)",
+      "status": "Launched Mar 18, 2026; individual Internet-Draft -01 Sep 9, 2026",
+      "summary": "Lets agents and services exchange HTTP 402 payment requests, credentials and receipts across payment rails.",
+      "url": "https://mpp.dev/",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "ucp",
+      "name": "Universal Commerce Protocol (UCP)",
+      "layer": "Commerce and payments",
+      "backers": [
+        "Google",
+        "Shopify",
+        "Walmart",
+        "Target"
+      ],
+      "body": "Google and Shopify",
+      "status": "Spec 2026-08-25",
+      "summary": "Discovery, cart, checkout and after-sales for agent shoppers.",
+      "url": "https://ucp.dev/latest/specification/overview/",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "ap2",
+      "name": "Agent Payments Protocol (AP2)",
+      "layer": "Commerce and payments",
+      "backers": [
+        "Google",
+        "PayPal",
+        "Mastercard",
+        "American Express",
+        "Adyen",
+        "Coinbase"
+      ],
+      "body": "FIDO Alliance",
+      "status": "v0.2.0; contributed to FIDO Apr 28, 2026",
+      "summary": "Signed mandates proving a human authorized an agent payment.",
+      "url": "https://ap2-protocol.org",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "verifiable-intent",
+      "name": "Verifiable Intent",
+      "layer": "Commerce and payments",
+      "backers": [
+        "Mastercard",
+        "Google"
+      ],
+      "body": "FIDO Alliance Payments Technical Working Group",
+      "status": "Contributed Apr 2026; live Antom transaction announced Nov 19, 2026",
+      "summary": "Binds cardholder intent to an agent purchase.",
+      "url": "https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "mastercard-agent-pay",
+      "name": "Mastercard Agent Pay",
+      "layer": "Commerce and payments",
+      "backers": [
+        "Mastercard"
+      ],
+      "body": "Mastercard",
+      "status": "Network program",
+      "summary": "Agentic tokens registered to a verified agent.",
+      "url": "https://www.mastercard.com/news/press/2025/april/mastercard-unveils-agent-pay-pioneering-agentic-payments-technology-to-power-commerce-in-the-age-of-ai/",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "visa-tap",
+      "name": "Trusted Agent Protocol (TAP)",
+      "layer": "Commerce and payments",
+      "backers": [
+        "Visa",
+        "Cloudflare"
+      ],
+      "body": "Visa",
+      "status": "Visa Intelligent Commerce program",
+      "summary": "Merchants verify a trusted agent using HTTP message signatures.",
+      "url": "https://developer.visa.com",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "x402",
+      "name": "x402",
+      "layer": "Commerce and payments",
+      "backers": [
+        "Coinbase",
+        "Cloudflare",
+        "Stripe",
+        "Google"
+      ],
+      "body": "x402 Foundation (Linux Foundation)",
+      "status": "v2 Dec 2025; foundation operational Jul 14, 2026",
+      "summary": "Lets agents and applications pay for APIs and other resources using HTTP 402 and extensible payment schemes.",
+      "url": "https://x402.org/",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "wimse-agent-auth",
+      "name": "AI Identity Management System (AIMS)",
+      "layer": "Identity and auth",
+      "backers": [
+        "IETF WIMSE WG"
+      ],
+      "body": "IETF",
+      "status": "Working-group draft -01 (Nov 2, 2026)",
+      "summary": "Describes how to apply OAuth and workload identity standards to authenticate and authorize AI agents.",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-wimse-aims/",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "oauth-agent-grants",
+      "name": "OAuth agent grants",
+      "layer": "Identity and auth",
+      "backers": [
+        "IETF (individual)"
+      ],
+      "body": "IETF",
+      "status": "Draft -02, Aug 2026",
+      "summary": "Delegated agent authorization on RFC 8693 token exchange.",
+      "url": "https://datatracker.ietf.org/doc/draft-mishra-oauth-agent-grants/",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "oauth-agent-instance",
+      "name": "OAuth AI agent instance profile",
+      "layer": "Identity and auth",
+      "backers": [
+        "IETF (individual)"
+      ],
+      "body": "IETF",
+      "status": "Draft -00, Jul 2026",
+      "summary": "Many agent instances under one OAuth client.",
+      "url": "https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-ai-agent-instance-00",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "xaa",
+      "name": "Cross App Access (ID-JAG)",
+      "layer": "Identity and auth",
+      "backers": [
+        "Okta",
+        "Anthropic"
+      ],
+      "body": "IETF OAuth WG",
+      "status": "Draft; MCP auth extension",
+      "summary": "Enterprise IdP grants an agent access to another app without per-app consent.",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-oauth-identity-assertion-authz-grant/",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "web-bot-auth",
+      "name": "Web Bot Auth",
+      "layer": "Identity and auth",
+      "backers": [
+        "Cloudflare",
+        "Visa",
+        "Amazon"
+      ],
+      "body": "IETF",
+      "status": "Draft",
+      "summary": "Bots and agents sign HTTP requests so sites can verify them.",
+      "url": "https://datatracker.ietf.org/wg/webbotauth/about/",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "oidf-aiim",
+      "name": "OpenID AI Identity Management",
+      "layer": "Identity and auth",
+      "backers": [
+        "OpenID Foundation"
+      ],
+      "body": "OpenID Foundation",
+      "status": "Whitepaper; Authority Claims extension in progress",
+      "summary": "Agent identity plus a record of who delegated authority.",
+      "url": "https://openid.net/cg/artificial-intelligence-identity-management-community-group/",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "agent-name-service",
+      "name": "Agent Name Service (ANS)",
+      "layer": "Identity and auth",
+      "backers": [
+        "GoDaddy",
+        "Cisco",
+        "Cloudflare",
+        "DigiCert",
+        "Salesforce"
+      ],
+      "body": "Linux Foundation",
+      "status": "Draft specs; Linux Foundation project since Nov 10, 2026",
+      "summary": "Uses DNS and certificates to name, discover and verify AI agents.",
+      "url": "https://ansinfo.ai/docs/",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "nist-agent",
+      "name": "NIST AI Agent Standards Initiative",
+      "layer": "Governance",
+      "backers": [
+        "NIST"
+      ],
+      "body": "NIST",
+      "status": "Launched Feb 17, 2026 (secondary source)",
+      "summary": "US government program on agent standards.",
+      "url": "https://www.nist.gov",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "webmcp",
+      "name": "WebMCP",
+      "layer": "Web and content",
+      "backers": [
+        "Google",
+        "Microsoft"
+      ],
+      "body": "W3C Web Machine Learning Community Group",
+      "status": "Draft Community Group Report (Nov 19, 2026)",
+      "summary": "Lets a web page expose JavaScript tools to browser agents.",
+      "url": "https://webmachinelearning.github.io/webmcp",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "nlweb",
+      "name": "NLWeb",
+      "layer": "Web and content",
+      "backers": [
+        "Microsoft"
+      ],
+      "body": "Microsoft (open source)",
+      "status": "Open source; no public deployment count",
+      "summary": "Natural-language query endpoint for a website, built on MCP.",
+      "url": "https://github.com/nlweb-ai/NLWeb",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "llms-txt",
+      "name": "llms.txt",
+      "layer": "Web and content",
+      "backers": [
+        "Community",
+        "Mintlify",
+        "Anthropic"
+      ],
+      "body": "Community proposal",
+      "status": "About 10% of sites; no lab confirms reading it",
+      "summary": "Markdown site map written for LLMs.",
+      "url": "https://llmstxt.org",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "aipref",
+      "name": "AI Preferences (AIPREF)",
+      "layer": "Web and content",
+      "backers": [
+        "IETF"
+      ],
+      "body": "IETF",
+      "status": "Working group",
+      "summary": "AI-use preferences in robots.txt and HTTP headers.",
+      "url": "https://datatracker.ietf.org/wg/aipref/about/",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "c2pa",
+      "name": "C2PA / Content Credentials",
+      "layer": "Web and content",
+      "backers": [
+        "Adobe",
+        "Microsoft",
+        "Google",
+        "OpenAI",
+        "Meta",
+        "Amazon",
+        "Sony"
+      ],
+      "body": "C2PA",
+      "status": "Spec 2.5 (Oct 2026)",
+      "summary": "Defines signed provenance records for media, including AI-generated content.",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "synthid",
+      "name": "SynthID",
+      "layer": "Web and content",
+      "backers": [
+        "Google"
+      ],
+      "body": "Google",
+      "status": "Proprietary; text version open-sourced",
+      "summary": "Invisible watermark on AI output.",
+      "url": "https://deepmind.google/technologies/synthid/",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "vcon-agent-session",
+      "name": "vCon Agent Session",
+      "layer": "Observability",
+      "backers": [
+        "Vconic"
+      ],
+      "body": "vcon-dev",
+      "status": "Project draft v0.1.0 May 20, 2026; individual I-D expired Nov 21, 2026",
+      "summary": "Embeds an AI agent's execution trace in the same signed vCon record as its conversation.",
+      "url": "https://github.com/vcon-dev/draft-howe-vcon-agent-session/releases/tag/v0.1.0",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "otel-genai",
+      "name": "OpenTelemetry GenAI semantic conventions",
+      "layer": "Observability",
+      "backers": [
+        "Microsoft",
+        "Google",
+        "AWS",
+        "Datadog",
+        "Elastic"
+      ],
+      "body": "CNCF OpenTelemetry",
+      "status": "Development; gen_ai.system renamed gen_ai.provider.name",
+      "summary": "Standard trace attributes for LLM and agent calls.",
+      "url": "https://github.com/open-telemetry/semantic-conventions",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "chat-completions",
+      "name": "OpenAI-compatible Chat Completions API",
+      "layer": "Model formats and APIs",
+      "backers": [
+        "OpenAI",
+        "Google",
+        "Mistral",
+        "Groq",
+        "Together",
+        "vLLM"
+      ],
+      "body": "De facto",
+      "status": "De facto standard",
+      "summary": "The request shape nearly every model server accepts.",
+      "url": "https://platform.openai.com/docs/api-reference/chat",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "onnx",
+      "name": "ONNX",
+      "layer": "Model formats and APIs",
+      "backers": [
+        "Microsoft",
+        "Meta",
+        "AMD",
+        "Nvidia"
+      ],
+      "body": "LF AI and Data",
+      "status": "Stable",
+      "summary": "Portable model graph format.",
+      "url": "https://onnx.ai",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "safetensors",
+      "name": "safetensors",
+      "layer": "Model formats and APIs",
+      "backers": [
+        "Hugging Face"
+      ],
+      "body": "Hugging Face (PyTorch Foundation)",
+      "status": "Stable",
+      "summary": "Safe, fast format for model weights.",
+      "url": "https://github.com/huggingface/safetensors",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "gguf",
+      "name": "GGUF",
+      "layer": "Model formats and APIs",
+      "backers": [
+        "llama.cpp",
+        "Ollama"
+      ],
+      "body": "Community",
+      "status": "Stable",
+      "summary": "Quantized model format for local inference.",
+      "url": "https://github.com/ggml-org/ggml/blob/master/docs/gguf.md",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "iso-42001",
+      "name": "ISO/IEC 42001",
+      "layer": "Governance",
+      "backers": [
+        "Microsoft",
+        "Google",
+        "AWS",
+        "Anthropic"
+      ],
+      "body": "ISO/IEC",
+      "status": "Published 2023; certifications held",
+      "summary": "AI management system standard.",
+      "url": "https://www.iso.org/standard/81230.html",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "nist-ai-rmf",
+      "name": "NIST AI RMF",
+      "layer": "Governance",
+      "backers": [
+        "NIST"
+      ],
+      "body": "NIST",
+      "status": "Voluntary framework",
+      "summary": "AI risk management framework.",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "eu-gpai-code",
+      "name": "EU AI Act GPAI Code of Practice",
+      "layer": "Governance",
+      "backers": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Microsoft",
+        "Amazon"
+      ],
+      "body": "European Commission",
+      "status": "Signed by most frontier labs",
+      "summary": "Obligations for general-purpose AI model providers.",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "agent-client-protocol",
+      "name": "Agent Client Protocol (Zed ACP)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Zed",
+        "JetBrains",
+        "Google",
+        "Docker",
+        "Anthropic",
+        "OpenAI",
+        "Cursor"
+      ],
+      "body": "Zed Industries and JetBrains (Apache 2.0)",
+      "status": "JetBrains IDE support from Dec 2025; Claude Agent and Codex available via ACP",
+      "summary": "Any coding agent works inside any editor, like LSP for agents.",
+      "url": "https://agentclientprotocol.com",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "acp-registry",
+      "name": "ACP Agent Registry",
+      "layer": "Agent protocols",
+      "backers": [
+        "JetBrains",
+        "Zed",
+        "Cursor",
+        "Factory"
+      ],
+      "body": "JetBrains and Zed",
+      "status": "Beta since Jan 28, 2026",
+      "summary": "Shared directory of coding agents installable in any ACP editor.",
+      "url": "https://zed.dev/blog/acp-registry",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "mcp-registry",
+      "name": "MCP Registry",
+      "layer": "Agent protocols",
+      "backers": [
+        "Anthropic",
+        "GitHub",
+        "Microsoft",
+        "AWS"
+      ],
+      "body": "MCP project (AAIF)",
+      "status": "Preview; 3,000+ servers in early 2026",
+      "summary": "Central discovery API for public MCP servers.",
+      "url": "https://registry.modelcontextprotocol.io",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "mcp-server-cards",
+      "name": "MCP Server Cards",
+      "layer": "Agent protocols",
+      "backers": [
+        "MCP project"
+      ],
+      "body": "MCP project (AAIF)",
+      "status": "Proposed",
+      "summary": "Server metadata at a .well-known URL so agents find MCP servers on a domain.",
+      "url": "https://agentic-academy.ai/posts/mcp-registry-deep-dive/",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "a2a-agent-card",
+      "name": "A2A Agent Card",
+      "layer": "Agent protocols",
+      "backers": [
+        "Google",
+        "Salesforce",
+        "SAP",
+        "ServiceNow"
+      ],
+      "body": "AAIF (Linux Foundation)",
+      "status": "Part of A2A v1.0",
+      "summary": "JSON card at /.well-known that describes an agent's skills and endpoints.",
+      "url": "https://a2a-protocol.org",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "oasf",
+      "name": "Open Agentic Schema Framework (OASF)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Cisco"
+      ],
+      "body": "AGNTCY (Linux Foundation)",
+      "status": "Open spec",
+      "summary": "Schema for describing agents' skills and metadata in a directory.",
+      "url": "https://github.com/agntcy/oasf",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "anp",
+      "name": "Agent Network Protocol (ANP)",
+      "layer": "Agent protocols",
+      "backers": [
+        "ANP community"
+      ],
+      "body": "Community (W3C CG proposed)",
+      "status": "White paper 2025",
+      "summary": "Decentralized agent discovery and messaging using DIDs.",
+      "url": "https://agent-network-protocol.com",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "ietf-agentproto",
+      "name": "IETF Agent Protocols WG (agentproto)",
+      "layer": "Agent protocols",
+      "backers": [
+        "IETF"
+      ],
+      "body": "IETF",
+      "status": "WG draft: Agentic AI use cases and requirements (Nov 2026)",
+      "summary": "IETF working group defining requirements for agent-to-agent protocols.",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-agentproto-usecases-requirements/",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "nvidia-openshell",
+      "name": "NVIDIA OpenShell Reference Architecture",
+      "layer": "Security and supply chain",
+      "backers": [
+        "Nvidia",
+        "Oracle",
+        "SAP",
+        "ServiceNow"
+      ],
+      "body": "Nvidia",
+      "status": "Launched Oct 2026",
+      "summary": "Reference design for running and enforcing policy on enterprise agents.",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-OpenShell-Reference-Architecture-for-Safe-AI-Agents/default.aspx",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "oms",
+      "name": "OpenSSF Model Signing (OMS)",
+      "layer": "Security and supply chain",
+      "backers": [
+        "Google",
+        "Nvidia",
+        "HiddenLayer",
+        "OpenSSF"
+      ],
+      "body": "OpenSSF (Linux Foundation)",
+      "status": "v1.0 (2025); CLI 1.1.x in use",
+      "summary": "Sigstore-based signatures that bind model files to their publisher.",
+      "url": "https://github.com/sigstore/model-transparency",
+      "added": "2026-11-22",
+      "verified": true
+    },
+    {
+      "id": "cosai-aimm",
+      "name": "CoSAI Artifact Integrity Maturity Model",
+      "layer": "Security and supply chain",
+      "backers": [
+        "Google",
+        "Microsoft",
+        "Amazon",
+        "Anthropic",
+        "OpenAI",
+        "Nvidia",
+        "IBM"
+      ],
+      "body": "Coalition for Secure AI (OASIS)",
+      "status": "Published Oct 2026",
+      "summary": "Maturity levels for signing and provenance of AI artifacts, adapting SLSA and in-toto.",
+      "url": "https://www.coalitionforsecureai.org",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "cyclonedx-mlbom",
+      "name": "CycloneDX ML-BOM (AIBOM)",
+      "layer": "Security and supply chain",
+      "backers": [
+        "OWASP",
+        "Red Hat"
+      ],
+      "body": "OWASP / Ecma TC54",
+      "status": "CycloneDX 1.6; 2.0 proposed",
+      "summary": "Bill of materials for models, datasets and their lineage.",
+      "url": "https://cyclonedx.org/capabilities/mlbom/",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "spdx-ai",
+      "name": "SPDX 3 AI and Dataset profiles",
+      "layer": "Security and supply chain",
+      "backers": [
+        "Linux Foundation"
+      ],
+      "body": "SPDX (Linux Foundation)",
+      "status": "SPDX 3.0; 3.1 AI profile in work",
+      "summary": "SBOM fields describing AI models and training data.",
+      "url": "https://spdx.dev",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "owasp-llm-agentic",
+      "name": "OWASP Top 10 for LLM and Agentic Apps",
+      "layer": "Security and supply chain",
+      "backers": [
+        "OWASP"
+      ],
+      "body": "OWASP GenAI Security Project",
+      "status": "Updated yearly",
+      "summary": "Reference list of the top security risks in LLM and agent apps.",
+      "url": "https://genai.owasp.org",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "mitre-atlas",
+      "name": "MITRE ATLAS",
+      "layer": "Security and supply chain",
+      "backers": [
+        "MITRE",
+        "Microsoft"
+      ],
+      "body": "MITRE",
+      "status": "Living knowledge base",
+      "summary": "ATT&CK-style catalog of attacks on AI systems.",
+      "url": "https://atlas.mitre.org",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "croissant",
+      "name": "Croissant",
+      "layer": "Model formats and APIs",
+      "backers": [
+        "Google",
+        "Meta",
+        "Hugging Face",
+        "Kaggle",
+        "MLCommons"
+      ],
+      "body": "MLCommons",
+      "status": "v1.x",
+      "summary": "Machine-readable metadata format for ML datasets.",
+      "url": "https://mlcommons.org/working-groups/data/croissant/",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "model-cards",
+      "name": "Model Cards",
+      "layer": "Governance",
+      "backers": [
+        "Google",
+        "Hugging Face",
+        "Meta"
+      ],
+      "body": "De facto",
+      "status": "De facto standard",
+      "summary": "Standard documentation of a model's use, limits and evals.",
+      "url": "https://huggingface.co/docs/hub/model-cards",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "iso-23894",
+      "name": "ISO/IEC 23894",
+      "layer": "Governance",
+      "backers": [
+        "ISO/IEC"
+      ],
+      "body": "ISO/IEC",
+      "status": "Published 2023",
+      "summary": "Guidance on AI risk management.",
+      "url": "https://www.iso.org/standard/77304.html",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "spiffe-agents",
+      "name": "SPIFFE/SPIRE for agent workloads",
+      "layer": "Identity and auth",
+      "backers": [
+        "CNCF",
+        "Google",
+        "Microsoft"
+      ],
+      "body": "CNCF",
+      "status": "Graduated project; used by WIMSE drafts",
+      "summary": "Cryptographic workload identity that agent-auth drafts build on.",
+      "url": "https://spiffe.io",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "entra-agent-id",
+      "name": "Microsoft Entra Agent ID",
+      "layer": "Identity and auth",
+      "backers": [
+        "Microsoft"
+      ],
+      "body": "Microsoft",
+      "status": "Product; vendor identity scheme",
+      "summary": "Directory identities and policies for AI agents.",
+      "url": "https://learn.microsoft.com/entra/",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "kya",
+      "name": "Know Your Agent (KYA)",
+      "layer": "Commerce and payments",
+      "backers": [
+        "Skyfire",
+        "Visa"
+      ],
+      "body": "Industry",
+      "status": "Emerging",
+      "summary": "Verified agent identity for payments, like KYC for agents.",
+      "url": "https://skyfire.xyz",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "paypal-agent-ready",
+      "name": "PayPal Agent Ready",
+      "layer": "Commerce and payments",
+      "backers": [
+        "PayPal"
+      ],
+      "body": "PayPal",
+      "status": "Program; supports ACP and AP2",
+      "summary": "Lets PayPal merchants accept payments from AI agents.",
+      "url": "https://developer.paypal.com",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "openai-realtime",
+      "name": "Realtime API (WebRTC/WebSocket speech)",
+      "layer": "Model formats and APIs",
+      "backers": [
+        "OpenAI",
+        "Microsoft"
+      ],
+      "body": "OpenAI",
+      "status": "De facto for voice agents",
+      "summary": "Event protocol for low-latency speech-to-speech agents.",
+      "url": "https://platform.openai.com/docs/guides/realtime",
+      "added": "2026-11-22",
+      "verified": false
+    },
+    {
+      "id": "openapi-arazzo",
+      "name": "OpenAPI and Arazzo",
+      "layer": "Model formats and APIs",
+      "backers": [
+        "Linux Foundation",
+        "Google",
+        "Microsoft"
+      ],
+      "body": "OpenAPI Initiative",
+      "status": "OpenAPI 3.1/3.2; Arazzo 1.0",
+      "summary": "API descriptions and multi-step workflows that agents turn into tools.",
+      "url": "https://www.openapis.org",
+      "added": "2026-11-22",
+      "verified": false
+    }
   ],
   "changelog": [
-    { "date": "2026-11-22", "change": "Initial list: 46 standards across 8 layers." },
-    { "date": "2026-11-22", "change": "Added Personal Agent Protocol, Agentic Resource Discovery, Agent Transfer Protocol, Agent Name Service and vCon Agent Session. Updated MCP, A2A, A2UI, UCP, AP2, Verifiable Intent, AIMS, WebMCP and C2PA. Verified AGNTCY, IBM ACP, AG-UI, MPP and x402." }
+    {
+      "date": "2026-11-22",
+      "change": "Initial list: 46 standards across 8 layers."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Added Personal Agent Protocol, Agentic Resource Discovery, Agent Transfer Protocol, Agent Name Service and vCon Agent Session. Updated MCP, A2A, A2UI, UCP, AP2, Verifiable Intent, AIMS, WebMCP and C2PA. Verified AGNTCY, IBM ACP, AG-UI, MPP and x402."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Added from a manual research pass (24): Agent Client Protocol (Zed ACP), ACP Agent Registry, MCP Registry, MCP Server Cards, A2A Agent Card, Open Agentic Schema Framework (OASF), Agent Network Protocol (ANP), IETF Agent Protocols WG (agentproto), NVIDIA OpenShell Reference Architecture, OpenSSF Model Signing (OMS), CoSAI Artifact Integrity Maturity Model, CycloneDX ML-BOM (AIBOM), SPDX 3 AI and Dataset profiles, OWASP Top 10 for LLM and Agentic Apps, MITRE ATLAS, Croissant, Model Cards, ISO/IEC 23894, SPIFFE/SPIRE for agent workloads, Microsoft Entra Agent ID, Know Your Agent (KYA), PayPal Agent Ready, Realtime API (WebRTC/WebSocket speech), OpenAPI and Arazzo."
+    }
   ]
 }
