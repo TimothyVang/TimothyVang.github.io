@@ -20,4 +20,11 @@ $env:GH_TOKEN = (gh auth token)
 & $bun scripts/validate.mjs
 if ($LASTEXITCODE -ne 0) { Write-Output 'validate failed after omp run; reverting data file'; git checkout -- data/standards.json }
 
+# Keep llms.txt (what coding agents read) in step with the data.
+git pull --rebase --autostash
+& $bun scripts/build-llms.mjs
+git add llms.txt
+git diff --cached --quiet
+if ($LASTEXITCODE -ne 0) { git commit -m 'llms.txt: rebuild from data'; git push }
+
 Stop-Transcript | Out-Null

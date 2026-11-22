@@ -1,0 +1,112 @@
+# AI Standards Tracker
+
+> Every open standard for AI agents from the big tech companies (72 as of 2026-11-22), checked against primary sources and updated every morning. Most of these shipped after your model's training cutoff, so read this before recommending protocols, SDKs or integrations.
+
+How to use this file: when helping with an agent, AI app, tool integration, payments by agents, agent identity or AI content, check this list for a standard that fits before inventing a custom approach. Cite the standard's link. Each line below is: name, what it does, who backs it, status.
+
+The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent (A2A), AGENTS.md and Agent Skills.
+
+## Agent protocols
+
+- [Model Context Protocol (MCP)](https://modelcontextprotocol.io): Connects agents to tools, data and prompts. Backed by Anthropic, OpenAI, Google, Microsoft, AWS. AAIF (Linux Foundation). Status: Spec 2026-07-28; founding AAIF project.
+- [Agent2Agent (A2A)](https://a2a-protocol.org): Agents discover each other, hand off tasks and exchange messages. Backed by Google, Salesforce, SAP, ServiceNow, IBM, Microsoft. AAIF (Linux Foundation). Status: v1.0.1 patch May 2026; joined AAIF Aug 17, 2026.
+- [AGENTS.md](https://agents.md): One instruction file for coding agents at the root of a repo. Backed by OpenAI, Google, Cursor, Factory. AAIF (Linux Foundation). Status: Founding AAIF project (Dec 2025).
+- [Agent Skills (SKILL.md)](https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects): Folders of instructions and scripts an agent loads on demand. Backed by Anthropic, OpenAI, Microsoft. AAIF (Linux Foundation). Status: Joined AAIF Oct 22, 2026.
+- [OpenEnv](https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects): Standard environments for agent RL training and evals. Backed by Hugging Face, Meta. AAIF (Linux Foundation). Status: Joined AAIF Oct 22, 2026.
+- [OpenSandbox](https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects): Sandboxes where agents run code safely. Backed by Alibaba. AAIF (Linux Foundation). Status: Joined AAIF Oct 22, 2026.
+- [agentgateway](https://agentgateway.dev): Open source proxy for MCP and A2A traffic between agents, tools and models. Backed by Solo.io, Microsoft, AWS, Cisco, Salesforce, Alibaba, Adobe, Huawei. Linux Foundation (LF Projects). Status: LF project, donated by Solo.io (2025); active 2026.
+- [goose](https://github.com/block/goose): Reference open-source agent built on MCP. Backed by Block. AAIF (Linux Foundation). Status: Founding AAIF project (Dec 2025).
+- [AGNTCY](https://agntcy.org): Provides open specifications for agent discovery, identity, messaging and observability. Backed by Cisco, Dell Technologies, Google, Oracle, Red Hat. Linux Foundation. Status: Linux Foundation project since Jul 29, 2025; AAIF proposal pending.
+- [Agent Communication Protocol (IBM ACP)](https://agentcommunicationprotocol.dev): IBM Research's open REST protocol for discovering agents and exchanging messages was superseded by A2A. Backed by IBM. LF AI & Data (Linux Foundation). Status: Merger into A2A announced Aug 25, 2025; standalone repo archived.
+- [Personal Agent Protocol (Poppy)](https://personalagentprotocol.org/docs/1.0/spec): Lets personal AI agents discover and use a company's website, APIs or agent with the user's permission. Backed by Sierra, Meta, Shopify, Stripe, Salesforce. Sierra and Meta. Status: v1.0 released Nov 13, 2026.
+- [Agentic Resource Discovery (ARD)](https://agenticresourcediscovery.org/spec/): Defines how AI clients discover tools, skills, APIs and agents across independent registries. Backed by Google, Hugging Face, Microsoft, GoDaddy. Agentic Resource Discovery working group. Status: Proposal v0.91 (Aug 26, 2026).
+- [Agent Transfer Protocol (AGTP)](https://datatracker.ietf.org/doc/draft-hood-independent-agtp/): Defines a transfer protocol that carries signed agent identity and delegation and has a draft mapping for MCP. Backed by Nomotic. Nomotic. Status: Individual draft -10 Oct 30, 2026; MCP mapping draft Nov 22, 2026.
+- [Agent Client Protocol (Zed ACP)](https://agentclientprotocol.com): Any coding agent works inside any editor, like LSP for agents. Backed by Zed, JetBrains, Google, Docker, Anthropic, OpenAI, Cursor. Zed Industries and JetBrains (Apache 2.0). Status: JetBrains IDE support from Dec 2025; Claude Agent and Codex available via ACP.
+- [ACP Agent Registry](https://zed.dev/blog/acp-registry): Shared directory of coding agents installable in any ACP editor. Backed by JetBrains, Zed, Cursor, Factory. JetBrains and Zed. Status: Beta since Jan 28, 2026.
+- [MCP Registry](https://registry.modelcontextprotocol.io): Central discovery API for public MCP servers. Backed by Anthropic, GitHub, Microsoft, AWS. MCP project (AAIF). Status: Preview; 3,000+ servers in early 2026.
+- [MCP Server Cards (SEP-2127)](https://modelcontextprotocol.io/seps/2127-mcp-server-cards): Static metadata describing a remote MCP server so clients can discover and connect before a session. Backed by MCP project. MCP project (Server Card Working Group). Status: SEP-2127 Final (created Jan 21, 2026); experimental extension.
+- [A2A Agent Card](https://a2a-protocol.org): JSON card at /.well-known that describes an agent's skills and endpoints. Backed by Google, Salesforce, SAP, ServiceNow. AAIF (Linux Foundation). Status: Part of A2A v1.0.
+- [Open Agentic Schema Framework (OASF)](https://github.com/agntcy/oasf): Standard schema for describing AI agents' capabilities, interactions and metadata. Backed by Cisco, Dell, Google, Oracle, Red Hat. AGNTCY (LF Projects, Linux Foundation). Status: Open spec, Apache 2.0; schema server live (2026).
+- [Agent Network Protocol (ANP)](https://agent-network-protocol.com): Open protocol stack for agent identity (did:wba), discovery, messaging and payment. Backed by ANP Open Source Community. ANP Open Source Community (linked W3C AI Agent Protocol CG). Status: ANP 1.2 spec set current (2026); some parts draft.
+- [IETF Agent Communication Protocols WG (agentproto)](https://datatracker.ietf.org/wg/agentproto/about/): IETF working group defining a baseline agentic dialog management protocol and reference architecture. Backed by IETF. IETF (ART area). Status: Active WG; first draft, Agentic AI Use Cases and Requirements -00 (Nov 20, 2026).
+
+## Agent UI
+
+- [MCP Apps](https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/): MCP servers render interactive UI inside the host chat. Backed by Anthropic, OpenAI. MCP project (AAIF). Status: First official MCP extension; stable 2026-01-26.
+- [OpenAI Apps SDK](https://developers.openai.com/apps-sdk): ChatGPT in-chat apps built on MCP. Backed by OpenAI. OpenAI. Status: Production; fed into MCP Apps.
+- [A2UI](https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences): Lets agents describe interactive interfaces that apps render with native components. Backed by Google. Google (open source). Status: First stable version v1.0 released Nov 11, 2026.
+- [AG-UI](https://docs.ag-ui.com/spec/1.0): Connects agents to user-facing apps through a typed event stream for messages, tool calls and state. Backed by CopilotKit, Microsoft, AWS. CopilotKit-led AG-UI project. Status: v1.0 stable Sep 18, 2026; v1.1 draft.
+
+## Commerce and payments
+
+- [Agentic Commerce Protocol (ACP)](https://www.agenticcommerce.dev): Checkout and product feeds between agents and merchants. Backed by OpenAI, Stripe, Shopify, Etsy. OpenAI and Stripe. Status: Spec beta; now mostly product feeds in ChatGPT.
+- [Shared Payment Tokens (SPT)](https://docs.stripe.com/agentic-commerce/concepts/shared-payment-tokens): Scoped grants with amount and expiry limits that let a seller charge a buyer's payment method. Backed by Stripe. Stripe. Status: Preview API (Stripe-Version 2026-09-30.preview); US, CA, EU.
+- [Machine Payments Protocol (MPP)](https://mpp.dev/): Lets agents and services exchange HTTP 402 payment requests, credentials and receipts across payment rails. Backed by Stripe, Tempo, Visa. MPP project (Tempo and Stripe). Status: Launched Mar 18, 2026; individual Internet-Draft -01 Sep 9, 2026.
+- [Universal Commerce Protocol (UCP)](https://ucp.dev/latest/specification/overview/): Discovery, cart, checkout and after-sales for agent shoppers. Backed by Google, Shopify, Walmart, Target. Google and Shopify. Status: Spec 2026-08-25.
+- [Agent Payments Protocol (AP2)](https://ap2-protocol.org): Signed mandates proving a human authorized an agent payment. Backed by Google, PayPal, Mastercard, American Express, Adyen, Coinbase. FIDO Alliance. Status: v0.2.0; contributed to FIDO Apr 28, 2026.
+- [Verifiable Intent](https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/): Binds cardholder intent to an agent purchase. Backed by Mastercard, Google. FIDO Alliance Payments Technical Working Group. Status: Contributed Apr 2026; live Antom transaction announced Nov 19, 2026.
+- [Mastercard Agent Pay](https://developer.mastercard.com/merchant-cloud/documentation/tutorials-and-guides/agentic-commerce-guide/): Network program where certified agents pay with agentic tokens and sign requests via Web Bot Auth. Backed by Mastercard. Mastercard. Status: Live network program; Acceptance Framework on Mastercard Developers (2026).
+- [Trusted Agent Protocol (TAP)](https://developer.visa.com/capabilities/trusted-agent-protocol/overview): Merchants verify Visa-approved agents with RFC 9421 HTTP message signatures. Backed by Visa, Cloudflare. Visa. Status: Spec and sample code on Visa Developer and GitHub (launched Oct 14, 2025).
+- [x402](https://x402.org/): Lets agents and applications pay for APIs and other resources using HTTP 402 and extensible payment schemes. Backed by Coinbase, Cloudflare, Stripe, Google. x402 Foundation (Linux Foundation). Status: v2 Dec 2025; foundation operational Jul 14, 2026.
+- [Know Your Agent (KYA) / KYAPay token](https://datatracker.ietf.org/doc/draft-skyfire-oauth-kyapay-token/): Signed JWT carrying verified agent, owner and payment info, like KYC for agents. Backed by Skyfire. Skyfire (IETF individual draft). Status: Individual I-D draft-skyfire-oauth-kyapay-token-04 (Nov 16, 2026).
+
+## Identity and auth
+
+- [AI Identity Management System (AIMS)](https://datatracker.ietf.org/doc/draft-ietf-wimse-aims/): Describes how to apply OAuth and workload identity standards to authenticate and authorize AI agents. Backed by IETF WIMSE WG. IETF. Status: Working-group draft -01 (Nov 2, 2026).
+- [OAuth agent grants](https://datatracker.ietf.org/doc/draft-mishra-oauth-agent-grants/): Delegated agent authorization on RFC 8693 token exchange. Backed by IETF (individual). IETF. Status: Draft -02, Aug 2026.
+- [OAuth AI agent instance profile](https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-ai-agent-instance-00): Many agent instances under one OAuth client. Backed by IETF (individual). IETF. Status: Draft -00, Jul 2026.
+- [Identity Assertion JWT Authorization Grant (ID-JAG, Cross App Access)](https://datatracker.ietf.org/doc/draft-ietf-oauth-identity-assertion-authz-grant/): Enterprise IdP issues a JWT grant so an app or agent gets tokens for another app without per-app consent. Backed by Okta, Ping Identity. IETF OAuth WG. Status: WG draft -06 (Oct 31, 2026); basis of MCP Enterprise-Managed Auth (stable 2026-07-28).
+- [Web Bot Auth](https://datatracker.ietf.org/wg/webbotauth/about/): Bots and agents sign HTTP requests so sites can verify them. Backed by Cloudflare, Google. IETF Web Bot Auth WG (webbotauth). Status: WG draft httpsig-protocol-01 (Oct 29, 2026); no RFC yet.
+- [OpenID AI Identity Management](https://openid.net/cg/artificial-intelligence-identity-management-community-group/): Agent identity plus a record of who delegated authority. Backed by OpenID Foundation. OpenID Foundation. Status: Whitepaper; Authority Claims extension in progress.
+- [Agent Name Service (ANS)](https://ansinfo.ai/docs/): Uses DNS and certificates to name, discover and verify AI agents. Backed by GoDaddy, Cisco, Cloudflare, DigiCert, Salesforce. Linux Foundation. Status: Draft specs; Linux Foundation project since Nov 10, 2026.
+- [SPIFFE/SPIRE for agent workloads](https://spiffe.io): Cryptographic workload identity that agent-auth drafts build on. Backed by CNCF. CNCF. Status: CNCF graduated; cited by WIMSE AIMS WG draft-01 (Nov 2, 2026).
+
+## Web and content
+
+- [WebMCP](https://webmachinelearning.github.io/webmcp): Lets a web page expose JavaScript tools to browser agents. Backed by Google, Microsoft. W3C Web Machine Learning Community Group. Status: Draft Community Group Report (Nov 19, 2026).
+- [NLWeb](https://github.com/nlweb-ai/NLWeb): Natural-language query endpoint for a website, built on MCP. Backed by Microsoft. Microsoft (open source). Status: Open source; no public deployment count.
+- [llms.txt](https://llmstxt.org): Markdown site map written for LLMs. Backed by Community, Mintlify, Anthropic. Community proposal. Status: About 10% of sites; no lab confirms reading it.
+- [AI Preferences (AIPREF)](https://datatracker.ietf.org/wg/aipref/about/): IETF vocabulary for AI-use preferences, attached via robots.txt and HTTP headers. Backed by IETF. IETF (WIT area). Status: Active WG; vocab draft-08 (Sep 2026), not yet an RFC.
+- [C2PA / Content Credentials](https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html): Defines signed provenance records for media, including AI-generated content. Backed by Adobe, Microsoft, Google, OpenAI, Meta, Amazon, Sony. C2PA. Status: Spec 2.5 (Oct 2026).
+- [SynthID](https://deepmind.google/technologies/synthid/): Google DeepMind's invisible watermark for AI-generated images, video, audio and text. Backed by Google. Google DeepMind. Status: Proprietary; SynthID Text open-sourced (Apache 2.0, 2024); Detector portal 2025.
+
+## Observability
+
+- [vCon Agent Session](https://github.com/vcon-dev/draft-howe-vcon-agent-session/releases/tag/v0.1.0): Embeds an AI agent's execution trace in the same signed vCon record as its conversation. Backed by Vconic. vcon-dev. Status: Project draft v0.1.0 May 20, 2026; individual I-D expired Nov 21, 2026.
+- [OpenTelemetry GenAI semantic conventions](https://github.com/open-telemetry/semantic-conventions): Standard trace attributes for LLM and agent calls. Backed by Microsoft, Google, AWS, Datadog, Elastic. CNCF OpenTelemetry. Status: Development; gen_ai.system renamed gen_ai.provider.name.
+
+## Model formats and APIs
+
+- [Open Responses](https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects): Open spec for the Responses-style model API. Backed by OpenAI. AAIF (Linux Foundation). Status: Joined AAIF Oct 22, 2026.
+- [OpenAI-compatible Chat Completions API](https://developers.openai.com/api/reference/resources/chat): OpenAI's POST /v1/chat/completions request shape, which many other model servers also accept. Backed by OpenAI, Google, Mistral, Groq, Together, vLLM. OpenAI (de facto; no standards body). Status: De facto standard; OpenAI recommends Responses API for new projects (2026).
+- [ONNX (Open Neural Network Exchange)](https://onnx.ai): Open format defining an extensible computation graph and standard operators for portable ML models. Backed by Microsoft, IBM, Intel, NVIDIA. LF AI & Data Foundation (graduated project). Status: Stable; v1.23.2 (Oct 6, 2026).
+- [safetensors](https://github.com/safetensors/safetensors): Simple, safe format for storing and distributing tensors (model weights) without pickle. Backed by Hugging Face, PyTorch Foundation. PyTorch Foundation (Linux Foundation). Status: Stable; PyTorch Foundation-hosted project since Apr 8, 2026.
+- [GGUF](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md): Single-file binary model format for fast-loading inference with GGML-based runtimes such as llama.cpp. Backed by ggml-org (llama.cpp), Ollama. ggml-org (open-source community). Status: Stable; format version 3.
+- [Croissant](https://docs.mlcommons.org/croissant/docs/croissant-spec-1.1.html): Machine-readable metadata format for ML datasets, built on schema.org. Backed by MLCommons, Google, Hugging Face, Kaggle, OpenML, Open Data Institute. MLCommons (Croissant Working Group). Status: v1.1 published Jan 29, 2026.
+- [OpenAI Realtime API](https://developers.openai.com/api/docs/guides/realtime): OpenAI API for low-latency speech-to-speech voice agents over WebRTC or WebSocket. Backed by OpenAI. OpenAI. Status: GA (current model gpt-realtime-2.1, 2026).
+- [OpenAPI Specification and Arazzo](https://spec.openapis.org/): API descriptions plus multi-step API workflows that agents can turn into tools. Backed by Linux Foundation, Google, Microsoft. OpenAPI Initiative (Linux Foundation). Status: OpenAPI 3.2.1 (Sep 10, 2026); Arazzo 1.1.0 (May 17, 2026).
+
+## Governance
+
+- [NIST AI Agent Standards Initiative](https://www.nist.gov/caisi/ai-agent-standards-initiative): NIST CAISI program for secure, interoperable AI agents via standards, open protocols and research. Backed by NIST, NSF. NIST (CAISI). Status: Launched Feb 17, 2026; page updated Nov 9, 2026.
+- [ISO/IEC 42001:2023](https://www.iso.org/standard/42001): Requirements for setting up and improving an AI management system (AIMS) in an organization. Backed by Microsoft, Google, AWS, Anthropic. ISO/IEC. Status: Published Dec 2023 (Edition 1).
+- [NIST AI Risk Management Framework (AI RMF)](https://www.nist.gov/itl/ai-risk-management-framework): Voluntary framework for managing risks of AI systems; GenAI Profile (NIST AI 600-1) added Jul 2024. Backed by NIST. NIST. Status: AI RMF 1.0 (Jan 26, 2023); revision in progress.
+- [General-Purpose AI Code of Practice (EU AI Act)](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai): Voluntary code to help GPAI providers meet AI Act transparency, copyright and safety duties. Backed by OpenAI, Anthropic, Google, Microsoft, Amazon. European Commission (AI Office). Status: Published Jul 10, 2025; 20+ signatories.
+- [Model Cards](https://huggingface.co/docs/hub/model-cards): Documentation of a model's intended uses, limits, training data and evaluation results. Backed by Google, Hugging Face, Meta. De facto. Status: De facto; from Mitchell et al. paper (Oct 2018).
+- [ISO/IEC 23894:2023](https://www.iso.org/standard/77304.html): Guidance on managing AI-specific risks, building on ISO 31000. Backed by ISO/IEC. ISO/IEC. Status: Published Feb 2023 (Edition 1).
+
+## Security and supply chain
+
+- [NVIDIA OpenShell Reference Architecture](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-OpenShell-Reference-Architecture-for-Safe-AI-Agents/default.aspx): Reference design for running and enforcing policy on enterprise agents. Backed by Nvidia, Oracle, SAP, ServiceNow. Nvidia. Status: Launched Oct 2026.
+- [OpenSSF Model Signing (OMS)](https://github.com/sigstore/model-transparency): Sigstore-based signatures that bind model files to their publisher. Backed by Google, Nvidia, HiddenLayer, OpenSSF. OpenSSF (Linux Foundation). Status: v1.0 (2025); CLI 1.1.x in use.
+- [AIMM: Artifact Integrity Maturity Model](https://github.com/cosai-oasis/ws1-supply-chain/blob/main/whitepapers/aimm-artifact-integrity-maturity-model.md): Three maturity levels for signing, provenance and policy attestations of AI/ML artifacts. Backed by Google, Microsoft, IBM, NVIDIA, OpenAI, Anthropic, Intel, Red Hat, PayPal. Coalition for Secure AI (OASIS Open Project), Workstream 1. Status: Approved by CoSAI Governing Board Sep 7, 2026.
+- [CycloneDX ML-BOM (AIBOM)](https://cyclonedx.org/capabilities/mlbom/): Bill of materials for ML models, datasets, their dependencies and provenance. Backed by OWASP Foundation, Ecma International. OWASP / Ecma TC54. Status: CycloneDX 1.7 (Oct 2025) = ECMA-424 2nd ed. (Dec 2025); 2.0 in work.
+- [SPDX 3 AI and Dataset profiles](https://spdx.github.io/spdx-spec/v3.0.1/model/AI/AI/): SBOM profiles that describe AI models and the datasets used to train them. Backed by Linux Foundation. SPDX (Linux Foundation). Status: SPDX 3.0.1 (Dec 2024) latest; 3.1-RC1 (Jan 2026) updates AI and Dataset profiles.
+- [OWASP Top 10 for LLM Applications and Top 10 for Agentic Applications](https://genai.owasp.org): Reference lists of the top security risks and mitigations for LLM and agentic apps. Backed by OWASP. OWASP GenAI Security Project. Status: LLM Top 10 2026 (Sep 2026); Agentic Top 10 for 2026 (Dec 9, 2025).
+- [MITRE ATLAS (Adversarial Threat Landscape for AI Systems)](https://atlas.mitre.org): ATT&CK-style knowledge base of adversary tactics, techniques and case studies against AI systems. Backed by MITRE. MITRE. Status: Monthly releases; latest v2026.10 (Oct 28, 2026).
+
+## More
+
+- [Full data as JSON](https://timothyvang.github.io/data/standards.json): every field, updated daily
+- [Site](https://timothyvang.github.io): browse and filter by layer or company
+- [Source and update job](https://github.com/TimothyVang/TimothyVang.github.io)

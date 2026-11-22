@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AI Standards Tracker: every AI agent standard, updated daily</title>
+<title>AI Standards Tracker: the agent standards your AI doesn't know yet</title>
 <meta name="description" content="A self-updating map of the AI-native standards tech companies implement: MCP, A2A, ACP, AP2, UCP, x402 and more, across agent protocols, UI, payments, identity, web, security and governance.">
 <meta name="author" content="TimothyVang">
 <link rel="canonical" href="https://timothyvang.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="text/markdown" href="llms.txt" title="llms.txt">
 <meta name="theme-color" content="#161c1a">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AI Standards Tracker: every AI agent standard, updated daily">
@@ -49,6 +50,15 @@
   .feed__ok { color: var(--p-accent); }
   .feed__stage { position: relative; display: grid; place-items: center; min-height: 420px; padding: 48px 24px; }
   @media (max-width: 639px) { .feed__stage { min-height: 0; padding: 24px 16px; } .feed__ln { grid-template-columns: 1fr; gap: 0; } }
+
+  /* feed-your-AI prompt */
+  .feedme { margin-top: var(--s-5); display: grid; gap: 8px; max-width: 560px; }
+  .feedme__label { font: 500 12px/1 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .feedme__row { display: flex; align-items: stretch; border: 1px solid var(--line-strong); border-radius: 4px; background: var(--surface); overflow: hidden; }
+  .feedme__row code { flex: 1; min-width: 0; padding: 12px 14px; font: 400 13px/1.5 var(--font-mono); color: var(--ink); overflow-wrap: anywhere; }
+  .feedme__btn { flex: none; border: 0; border-left: 1px solid var(--line-strong); background: var(--accent); color: var(--accent-ink); font: 500 13px/1 var(--font-text); padding: 0 16px; cursor: pointer; transition: filter .15s; }
+  .feedme__btn:hover { filter: brightness(1.08); }
+  .feedme__btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
   /* filter bar */
   .filters { position: sticky; top: 0; z-index: 5; background: var(--bg); padding-block: var(--s-4); border-bottom: 1px solid var(--line); display: grid; gap: var(--s-3); }
@@ -160,8 +170,12 @@
     <div class="wrap"><div class="hero-text grid hero__grid">
       <div class="hero__text span-5">
         <p class="hero__kicker"><span class="dot" aria-hidden="true"></span>Updated <span id="k-updated">daily</span></p>
-        <h1 id="hero-h">Every AI agent standard, in one map</h1>
-        <p class="hero__lead"><span class="count" id="k-count">70+</span> open standards from <span class="count" id="k-backers">60+</span> companies and standards bodies. An omp agent checks GitHub, company blogs and the IETF every morning and keeps this page current.</p>
+        <h1 id="hero-h">Your AI doesn't know these exist</h1>
+        <p class="hero__lead">Claude Code, Codex and Cursor were trained before most agent standards shipped. They won't suggest A2A, AG-UI or MCP Apps for your app because they've never seen them. Here are <span class="count" id="k-count">70+</span> they're missing, from <span class="count" id="k-backers">60+</span> companies and groups, checked every morning.</p>
+        <div class="feedme">
+          <span class="feedme__label">Paste into Claude Code, Codex or Cursor</span>
+          <div class="feedme__row"><code id="feedme-text">Read https://timothyvang.github.io/llms.txt and tell me which of these standards my project should use.</code><button type="button" class="feedme__btn" id="feedme-copy">Copy</button></div>
+        </div>
         <div class="btn-row"><a class="btn btn--primary" href="#standards">Browse the map<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="https://github.com/TimothyVang/TimothyVang.github.io">See the source</a></div>
       </div>
       <div class="hero__media span-6 start-7" data-fx="painterly-landscape" data-fx-seed="23" role="img" aria-label="The tracker's latest changes, as written by the daily omp run.">
@@ -279,6 +293,12 @@
 <script>
 (async () => {
   const $ = id => document.getElementById(id);
+  $('feedme-copy').onclick = async () => {
+    const b = $('feedme-copy');
+    try { await navigator.clipboard.writeText($('feedme-text').textContent); b.textContent = 'Copied'; }
+    catch { getSelection().selectAllChildren($('feedme-text')); b.textContent = 'Press Ctrl+C'; }
+    setTimeout(() => { b.textContent = 'Copy'; }, 1800);
+  };
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   let data;
   try { data = await (await fetch('data/standards.json', { cache: 'no-store' })).json(); }
