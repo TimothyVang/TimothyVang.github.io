@@ -132,14 +132,19 @@
       "backers": [
         "Solo.io",
         "Microsoft",
-        "AWS"
+        "AWS",
+        "Cisco",
+        "Salesforce",
+        "Alibaba",
+        "Adobe",
+        "Huawei"
       ],
-      "body": "AAIF (Linux Foundation)",
-      "status": "AAIF project (reported Jun 2026)",
-      "summary": "Gateway and proxy for MCP and A2A traffic.",
+      "body": "Linux Foundation (LF Projects)",
+      "status": "LF project, donated by Solo.io (2025); active 2026",
+      "summary": "Open source proxy for MCP and A2A traffic between agents, tools and models.",
       "url": "https://agentgateway.dev",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "goose",
@@ -237,20 +242,6 @@
       "verified": true
     },
     {
-      "id": "llama-stack",
-      "name": "Llama Stack API",
-      "layer": "Model formats and APIs",
-      "backers": [
-        "Meta"
-      ],
-      "body": "Meta (open source)",
-      "status": "Open source",
-      "summary": "Standard API surface for inference, agents, safety and evals on Llama.",
-      "url": "https://github.com/meta-llama/llama-stack",
-      "added": "2026-11-22",
-      "verified": false
-    },
-    {
       "id": "mcp-apps",
       "name": "MCP Apps",
       "layer": "Agent UI",
@@ -328,17 +319,17 @@
     },
     {
       "id": "stripe-spt",
-      "name": "Shared Payment Tokens",
+      "name": "Shared Payment Tokens (SPT)",
       "layer": "Commerce and payments",
       "backers": [
         "Stripe"
       ],
       "body": "Stripe",
-      "status": "Production (part of ACP)",
-      "summary": "Scoped, single-use payment credentials an agent passes to a merchant.",
-      "url": "https://docs.stripe.com/agentic-commerce",
+      "status": "Preview API (Stripe-Version 2026-09-30.preview); US, CA, EU",
+      "summary": "Scoped grants with amount and expiry limits that let a seller charge a buyer's payment method.",
+      "url": "https://docs.stripe.com/agentic-commerce/concepts/shared-payment-tokens",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "mpp",
@@ -415,11 +406,11 @@
         "Mastercard"
       ],
       "body": "Mastercard",
-      "status": "Network program",
-      "summary": "Agentic tokens registered to a verified agent.",
-      "url": "https://www.mastercard.com/news/press/2025/april/mastercard-unveils-agent-pay-pioneering-agentic-payments-technology-to-power-commerce-in-the-age-of-ai/",
+      "status": "Live network program; Acceptance Framework on Mastercard Developers (2026)",
+      "summary": "Network program where certified agents pay with agentic tokens and sign requests via Web Bot Auth.",
+      "url": "https://developer.mastercard.com/merchant-cloud/documentation/tutorials-and-guides/agentic-commerce-guide/",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "visa-tap",
@@ -430,11 +421,11 @@
         "Cloudflare"
       ],
       "body": "Visa",
-      "status": "Visa Intelligent Commerce program",
-      "summary": "Merchants verify a trusted agent using HTTP message signatures.",
-      "url": "https://developer.visa.com",
+      "status": "Spec and sample code on Visa Developer and GitHub (launched Oct 14, 2025)",
+      "summary": "Merchants verify Visa-approved agents with RFC 9421 HTTP message signatures.",
+      "url": "https://developer.visa.com/capabilities/trusted-agent-protocol/overview",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "x402",
@@ -497,18 +488,18 @@
     },
     {
       "id": "xaa",
-      "name": "Cross App Access (ID-JAG)",
+      "name": "Identity Assertion JWT Authorization Grant (ID-JAG, Cross App Access)",
       "layer": "Identity and auth",
       "backers": [
         "Okta",
-        "Anthropic"
+        "Ping Identity"
       ],
       "body": "IETF OAuth WG",
-      "status": "Draft; MCP auth extension",
-      "summary": "Enterprise IdP grants an agent access to another app without per-app consent.",
+      "status": "WG draft -06 (Oct 31, 2026); basis of MCP Enterprise-Managed Auth (stable 2026-07-28)",
+      "summary": "Enterprise IdP issues a JWT grant so an app or agent gets tokens for another app without per-app consent.",
       "url": "https://datatracker.ietf.org/doc/draft-ietf-oauth-identity-assertion-authz-grant/",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "web-bot-auth",
@@ -516,15 +507,14 @@
       "layer": "Identity and auth",
       "backers": [
         "Cloudflare",
-        "Visa",
-        "Amazon"
+        "Google"
       ],
-      "body": "IETF",
-      "status": "Draft",
+      "body": "IETF Web Bot Auth WG (webbotauth)",
+      "status": "WG draft httpsig-protocol-01 (Oct 29, 2026); no RFC yet",
       "summary": "Bots and agents sign HTTP requests so sites can verify them.",
       "url": "https://datatracker.ietf.org/wg/webbotauth/about/",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "oidf-aiim",
@@ -563,14 +553,15 @@
       "name": "NIST AI Agent Standards Initiative",
       "layer": "Governance",
       "backers": [
-        "NIST"
+        "NIST",
+        "NSF"
       ],
-      "body": "NIST",
-      "status": "Launched Feb 17, 2026 (secondary source)",
-      "summary": "US government program on agent standards.",
-      "url": "https://www.nist.gov",
+      "body": "NIST (CAISI)",
+      "status": "Launched Feb 17, 2026; page updated Nov 9, 2026",
+      "summary": "NIST CAISI program for secure, interoperable AI agents via standards, open protocols and research.",
+      "url": "https://www.nist.gov/caisi/ai-agent-standards-initiative",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "webmcp",
@@ -624,12 +615,12 @@
       "backers": [
         "IETF"
       ],
-      "body": "IETF",
-      "status": "Working group",
-      "summary": "AI-use preferences in robots.txt and HTTP headers.",
+      "body": "IETF (WIT area)",
+      "status": "Active WG; vocab draft-08 (Sep 2026), not yet an RFC",
+      "summary": "IETF vocabulary for AI-use preferences, attached via robots.txt and HTTP headers.",
       "url": "https://datatracker.ietf.org/wg/aipref/about/",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "c2pa",
@@ -658,12 +649,12 @@
       "backers": [
         "Google"
       ],
-      "body": "Google",
-      "status": "Proprietary; text version open-sourced",
-      "summary": "Invisible watermark on AI output.",
+      "body": "Google DeepMind",
+      "status": "Proprietary; SynthID Text open-sourced (Apache 2.0, 2024); Detector portal 2025",
+      "summary": "Google DeepMind's invisible watermark for AI-generated images, video, audio and text.",
       "url": "https://deepmind.google/technologies/synthid/",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "vcon-agent-session",
@@ -709,62 +700,63 @@
         "Together",
         "vLLM"
       ],
-      "body": "De facto",
-      "status": "De facto standard",
-      "summary": "The request shape nearly every model server accepts.",
-      "url": "https://platform.openai.com/docs/api-reference/chat",
+      "body": "OpenAI (de facto; no standards body)",
+      "status": "De facto standard; OpenAI recommends Responses API for new projects (2026)",
+      "summary": "OpenAI's POST /v1/chat/completions request shape, which many other model servers also accept.",
+      "url": "https://developers.openai.com/api/reference/resources/chat",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "onnx",
-      "name": "ONNX",
+      "name": "ONNX (Open Neural Network Exchange)",
       "layer": "Model formats and APIs",
       "backers": [
         "Microsoft",
-        "Meta",
-        "AMD",
-        "Nvidia"
+        "IBM",
+        "Intel",
+        "NVIDIA"
       ],
-      "body": "LF AI and Data",
-      "status": "Stable",
-      "summary": "Portable model graph format.",
+      "body": "LF AI & Data Foundation (graduated project)",
+      "status": "Stable; v1.23.2 (Oct 6, 2026)",
+      "summary": "Open format defining an extensible computation graph and standard operators for portable ML models.",
       "url": "https://onnx.ai",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "safetensors",
       "name": "safetensors",
       "layer": "Model formats and APIs",
       "backers": [
-        "Hugging Face"
+        "Hugging Face",
+        "PyTorch Foundation"
       ],
-      "body": "Hugging Face (PyTorch Foundation)",
-      "status": "Stable",
-      "summary": "Safe, fast format for model weights.",
-      "url": "https://github.com/huggingface/safetensors",
+      "body": "PyTorch Foundation (Linux Foundation)",
+      "status": "Stable; PyTorch Foundation-hosted project since Apr 8, 2026",
+      "summary": "Simple, safe format for storing and distributing tensors (model weights) without pickle.",
+      "url": "https://github.com/safetensors/safetensors",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "gguf",
       "name": "GGUF",
       "layer": "Model formats and APIs",
       "backers": [
-        "llama.cpp",
+        "ggml-org (llama.cpp)",
         "Ollama"
       ],
-      "body": "Community",
-      "status": "Stable",
-      "summary": "Quantized model format for local inference.",
+      "body": "ggml-org (open-source community)",
+      "status": "Stable; format version 3",
+      "summary": "Single-file binary model format for fast-loading inference with GGML-based runtimes such as llama.cpp.",
       "url": "https://github.com/ggml-org/ggml/blob/master/docs/gguf.md",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "iso-42001",
-      "name": "ISO/IEC 42001",
+      "name": "ISO/IEC 42001:2023",
       "layer": "Governance",
       "backers": [
         "Microsoft",
@@ -773,29 +765,29 @@
         "Anthropic"
       ],
       "body": "ISO/IEC",
-      "status": "Published 2023; certifications held",
-      "summary": "AI management system standard.",
-      "url": "https://www.iso.org/standard/81230.html",
+      "status": "Published Dec 2023 (Edition 1)",
+      "summary": "Requirements for setting up and improving an AI management system (AIMS) in an organization.",
+      "url": "https://www.iso.org/standard/42001",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "nist-ai-rmf",
-      "name": "NIST AI RMF",
+      "name": "NIST AI Risk Management Framework (AI RMF)",
       "layer": "Governance",
       "backers": [
         "NIST"
       ],
       "body": "NIST",
-      "status": "Voluntary framework",
-      "summary": "AI risk management framework.",
+      "status": "AI RMF 1.0 (Jan 26, 2023); revision in progress",
+      "summary": "Voluntary framework for managing risks of AI systems; GenAI Profile (NIST AI 600-1) added Jul 2024.",
       "url": "https://www.nist.gov/itl/ai-risk-management-framework",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "eu-gpai-code",
-      "name": "EU AI Act GPAI Code of Practice",
+      "name": "General-Purpose AI Code of Practice (EU AI Act)",
       "layer": "Governance",
       "backers": [
         "OpenAI",
@@ -804,12 +796,12 @@
         "Microsoft",
         "Amazon"
       ],
-      "body": "European Commission",
-      "status": "Signed by most frontier labs",
-      "summary": "Obligations for general-purpose AI model providers.",
+      "body": "European Commission (AI Office)",
+      "status": "Published Jul 10, 2025; 20+ signatories",
+      "summary": "Voluntary code to help GPAI providers meet AI Act transparency, copyright and safety duties.",
       "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "agent-client-protocol",
@@ -867,17 +859,17 @@
     },
     {
       "id": "mcp-server-cards",
-      "name": "MCP Server Cards",
+      "name": "MCP Server Cards (SEP-2127)",
       "layer": "Agent protocols",
       "backers": [
         "MCP project"
       ],
-      "body": "MCP project (AAIF)",
-      "status": "Proposed",
-      "summary": "Server metadata at a .well-known URL so agents find MCP servers on a domain.",
-      "url": "https://agentic-academy.ai/posts/mcp-registry-deep-dive/",
+      "body": "MCP project (Server Card Working Group)",
+      "status": "SEP-2127 Final (created Jan 21, 2026); experimental extension",
+      "summary": "Static metadata describing a remote MCP server so clients can discover and connect before a session.",
+      "url": "https://modelcontextprotocol.io/seps/2127-mcp-server-cards",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "a2a-agent-card",
@@ -901,42 +893,46 @@
       "name": "Open Agentic Schema Framework (OASF)",
       "layer": "Agent protocols",
       "backers": [
-        "Cisco"
+        "Cisco",
+        "Dell",
+        "Google",
+        "Oracle",
+        "Red Hat"
       ],
-      "body": "AGNTCY (Linux Foundation)",
-      "status": "Open spec",
-      "summary": "Schema for describing agents' skills and metadata in a directory.",
+      "body": "AGNTCY (LF Projects, Linux Foundation)",
+      "status": "Open spec, Apache 2.0; schema server live (2026)",
+      "summary": "Standard schema for describing AI agents' capabilities, interactions and metadata.",
       "url": "https://github.com/agntcy/oasf",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "anp",
       "name": "Agent Network Protocol (ANP)",
       "layer": "Agent protocols",
       "backers": [
-        "ANP community"
+        "ANP Open Source Community"
       ],
-      "body": "Community (W3C CG proposed)",
-      "status": "White paper 2025",
-      "summary": "Decentralized agent discovery and messaging using DIDs.",
+      "body": "ANP Open Source Community (linked W3C AI Agent Protocol CG)",
+      "status": "ANP 1.2 spec set current (2026); some parts draft",
+      "summary": "Open protocol stack for agent identity (did:wba), discovery, messaging and payment.",
       "url": "https://agent-network-protocol.com",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "ietf-agentproto",
-      "name": "IETF Agent Protocols WG (agentproto)",
+      "name": "IETF Agent Communication Protocols WG (agentproto)",
       "layer": "Agent protocols",
       "backers": [
         "IETF"
       ],
-      "body": "IETF",
-      "status": "WG draft: Agentic AI use cases and requirements (Nov 2026)",
-      "summary": "IETF working group defining requirements for agent-to-agent protocols.",
-      "url": "https://datatracker.ietf.org/doc/draft-ietf-agentproto-usecases-requirements/",
+      "body": "IETF (ART area)",
+      "status": "Active WG; first draft, Agentic AI Use Cases and Requirements -00 (Nov 20, 2026)",
+      "summary": "IETF working group defining a baseline agentic dialog management protocol and reference architecture.",
+      "url": "https://datatracker.ietf.org/wg/agentproto/about/",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "nvidia-openshell",
@@ -974,38 +970,40 @@
     },
     {
       "id": "cosai-aimm",
-      "name": "CoSAI Artifact Integrity Maturity Model",
+      "name": "AIMM: Artifact Integrity Maturity Model",
       "layer": "Security and supply chain",
       "backers": [
         "Google",
         "Microsoft",
-        "Amazon",
-        "Anthropic",
+        "IBM",
+        "NVIDIA",
         "OpenAI",
-        "Nvidia",
-        "IBM"
+        "Anthropic",
+        "Intel",
+        "Red Hat",
+        "PayPal"
       ],
-      "body": "Coalition for Secure AI (OASIS)",
-      "status": "Published Oct 2026",
-      "summary": "Maturity levels for signing and provenance of AI artifacts, adapting SLSA and in-toto.",
-      "url": "https://www.coalitionforsecureai.org",
+      "body": "Coalition for Secure AI (OASIS Open Project), Workstream 1",
+      "status": "Approved by CoSAI Governing Board Sep 7, 2026",
+      "summary": "Three maturity levels for signing, provenance and policy attestations of AI/ML artifacts.",
+      "url": "https://github.com/cosai-oasis/ws1-supply-chain/blob/main/whitepapers/aimm-artifact-integrity-maturity-model.md",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "cyclonedx-mlbom",
       "name": "CycloneDX ML-BOM (AIBOM)",
       "layer": "Security and supply chain",
       "backers": [
-        "OWASP",
-        "Red Hat"
+        "OWASP Foundation",
+        "Ecma International"
       ],
       "body": "OWASP / Ecma TC54",
-      "status": "CycloneDX 1.6; 2.0 proposed",
-      "summary": "Bill of materials for models, datasets and their lineage.",
+      "status": "CycloneDX 1.7 (Oct 2025) = ECMA-424 2nd ed. (Dec 2025); 2.0 in work",
+      "summary": "Bill of materials for ML models, datasets, their dependencies and provenance.",
       "url": "https://cyclonedx.org/capabilities/mlbom/",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "spdx-ai",
@@ -1015,58 +1013,58 @@
         "Linux Foundation"
       ],
       "body": "SPDX (Linux Foundation)",
-      "status": "SPDX 3.0; 3.1 AI profile in work",
-      "summary": "SBOM fields describing AI models and training data.",
-      "url": "https://spdx.dev",
+      "status": "SPDX 3.0.1 (Dec 2024) latest; 3.1-RC1 (Jan 2026) updates AI and Dataset profiles",
+      "summary": "SBOM profiles that describe AI models and the datasets used to train them.",
+      "url": "https://spdx.github.io/spdx-spec/v3.0.1/model/AI/AI/",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "owasp-llm-agentic",
-      "name": "OWASP Top 10 for LLM and Agentic Apps",
+      "name": "OWASP Top 10 for LLM Applications and Top 10 for Agentic Applications",
       "layer": "Security and supply chain",
       "backers": [
         "OWASP"
       ],
       "body": "OWASP GenAI Security Project",
-      "status": "Updated yearly",
-      "summary": "Reference list of the top security risks in LLM and agent apps.",
+      "status": "LLM Top 10 2026 (Sep 2026); Agentic Top 10 for 2026 (Dec 9, 2025)",
+      "summary": "Reference lists of the top security risks and mitigations for LLM and agentic apps.",
       "url": "https://genai.owasp.org",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "mitre-atlas",
-      "name": "MITRE ATLAS",
+      "name": "MITRE ATLAS (Adversarial Threat Landscape for AI Systems)",
       "layer": "Security and supply chain",
       "backers": [
-        "MITRE",
-        "Microsoft"
+        "MITRE"
       ],
       "body": "MITRE",
-      "status": "Living knowledge base",
-      "summary": "ATT&CK-style catalog of attacks on AI systems.",
+      "status": "Monthly releases; latest v2026.10 (Oct 28, 2026)",
+      "summary": "ATT&CK-style knowledge base of adversary tactics, techniques and case studies against AI systems.",
       "url": "https://atlas.mitre.org",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "croissant",
       "name": "Croissant",
       "layer": "Model formats and APIs",
       "backers": [
+        "MLCommons",
         "Google",
-        "Meta",
         "Hugging Face",
         "Kaggle",
-        "MLCommons"
+        "OpenML",
+        "Open Data Institute"
       ],
-      "body": "MLCommons",
-      "status": "v1.x",
-      "summary": "Machine-readable metadata format for ML datasets.",
-      "url": "https://mlcommons.org/working-groups/data/croissant/",
+      "body": "MLCommons (Croissant Working Group)",
+      "status": "v1.1 published Jan 29, 2026",
+      "summary": "Machine-readable metadata format for ML datasets, built on schema.org.",
+      "url": "https://docs.mlcommons.org/croissant/docs/croissant-spec-1.1.html",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "model-cards",
@@ -1078,115 +1076,83 @@
         "Meta"
       ],
       "body": "De facto",
-      "status": "De facto standard",
-      "summary": "Standard documentation of a model's use, limits and evals.",
+      "status": "De facto; from Mitchell et al. paper (Oct 2018)",
+      "summary": "Documentation of a model's intended uses, limits, training data and evaluation results.",
       "url": "https://huggingface.co/docs/hub/model-cards",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "iso-23894",
-      "name": "ISO/IEC 23894",
+      "name": "ISO/IEC 23894:2023",
       "layer": "Governance",
       "backers": [
         "ISO/IEC"
       ],
       "body": "ISO/IEC",
-      "status": "Published 2023",
-      "summary": "Guidance on AI risk management.",
+      "status": "Published Feb 2023 (Edition 1)",
+      "summary": "Guidance on managing AI-specific risks, building on ISO 31000.",
       "url": "https://www.iso.org/standard/77304.html",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "spiffe-agents",
       "name": "SPIFFE/SPIRE for agent workloads",
       "layer": "Identity and auth",
       "backers": [
-        "CNCF",
-        "Google",
-        "Microsoft"
+        "CNCF"
       ],
       "body": "CNCF",
-      "status": "Graduated project; used by WIMSE drafts",
+      "status": "CNCF graduated; cited by WIMSE AIMS WG draft-01 (Nov 2, 2026)",
       "summary": "Cryptographic workload identity that agent-auth drafts build on.",
       "url": "https://spiffe.io",
       "added": "2026-11-22",
-      "verified": false
-    },
-    {
-      "id": "entra-agent-id",
-      "name": "Microsoft Entra Agent ID",
-      "layer": "Identity and auth",
-      "backers": [
-        "Microsoft"
-      ],
-      "body": "Microsoft",
-      "status": "Product; vendor identity scheme",
-      "summary": "Directory identities and policies for AI agents.",
-      "url": "https://learn.microsoft.com/entra/",
-      "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "kya",
-      "name": "Know Your Agent (KYA)",
+      "name": "Know Your Agent (KYA) / KYAPay token",
       "layer": "Commerce and payments",
       "backers": [
-        "Skyfire",
-        "Visa"
+        "Skyfire"
       ],
-      "body": "Industry",
-      "status": "Emerging",
-      "summary": "Verified agent identity for payments, like KYC for agents.",
-      "url": "https://skyfire.xyz",
+      "body": "Skyfire (IETF individual draft)",
+      "status": "Individual I-D draft-skyfire-oauth-kyapay-token-04 (Nov 16, 2026)",
+      "summary": "Signed JWT carrying verified agent, owner and payment info, like KYC for agents.",
+      "url": "https://datatracker.ietf.org/doc/draft-skyfire-oauth-kyapay-token/",
       "added": "2026-11-22",
-      "verified": false
-    },
-    {
-      "id": "paypal-agent-ready",
-      "name": "PayPal Agent Ready",
-      "layer": "Commerce and payments",
-      "backers": [
-        "PayPal"
-      ],
-      "body": "PayPal",
-      "status": "Program; supports ACP and AP2",
-      "summary": "Lets PayPal merchants accept payments from AI agents.",
-      "url": "https://developer.paypal.com",
-      "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "openai-realtime",
-      "name": "Realtime API (WebRTC/WebSocket speech)",
+      "name": "OpenAI Realtime API",
       "layer": "Model formats and APIs",
       "backers": [
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       "body": "OpenAI",
-      "status": "De facto for voice agents",
-      "summary": "Event protocol for low-latency speech-to-speech agents.",
-      "url": "https://platform.openai.com/docs/guides/realtime",
+      "status": "GA (current model gpt-realtime-2.1, 2026)",
+      "summary": "OpenAI API for low-latency speech-to-speech voice agents over WebRTC or WebSocket.",
+      "url": "https://developers.openai.com/api/docs/guides/realtime",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     },
     {
       "id": "openapi-arazzo",
-      "name": "OpenAPI and Arazzo",
+      "name": "OpenAPI Specification and Arazzo",
       "layer": "Model formats and APIs",
       "backers": [
         "Linux Foundation",
         "Google",
         "Microsoft"
       ],
-      "body": "OpenAPI Initiative",
-      "status": "OpenAPI 3.1/3.2; Arazzo 1.0",
-      "summary": "API descriptions and multi-step workflows that agents turn into tools.",
-      "url": "https://www.openapis.org",
+      "body": "OpenAPI Initiative (Linux Foundation)",
+      "status": "OpenAPI 3.2.1 (Sep 10, 2026); Arazzo 1.1.0 (May 17, 2026)",
+      "summary": "API descriptions plus multi-step API workflows that agents can turn into tools.",
+      "url": "https://spec.openapis.org/",
       "added": "2026-11-22",
-      "verified": false
+      "verified": true
     }
   ],
   "changelog": [
@@ -1251,6 +1217,58 @@
         "paypal-agent-ready",
         "openai-realtime",
         "openapi-arazzo"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "note": "Fact-check pass against primary sources.",
+      "verified": [
+        "stripe-spt",
+        "mastercard-agent-pay",
+        "visa-tap",
+        "xaa",
+        "web-bot-auth",
+        "kya",
+        "spiffe-agents",
+        "agentgateway",
+        "mcp-server-cards",
+        "oasf",
+        "anp",
+        "ietf-agentproto",
+        "aipref",
+        "synthid",
+        "openai-realtime",
+        "chat-completions",
+        "onnx",
+        "safetensors",
+        "gguf",
+        "croissant",
+        "openapi-arazzo",
+        "cyclonedx-mlbom",
+        "spdx-ai",
+        "cosai-aimm",
+        "nist-agent",
+        "iso-42001",
+        "nist-ai-rmf",
+        "eu-gpai-code",
+        "iso-23894",
+        "model-cards",
+        "owasp-llm-agentic",
+        "mitre-atlas"
+      ],
+      "removed": [
+        {
+          "id": "paypal-agent-ready",
+          "name": "PayPal Agent Ready"
+        },
+        {
+          "id": "entra-agent-id",
+          "name": "Microsoft Entra Agent ID"
+        },
+        {
+          "id": "llama-stack",
+          "name": "Llama Stack API"
+        }
       ]
     }
   ]

@@ -21,8 +21,11 @@ for (const [i, s] of (data.standards || []).entries()) {
   if (!date.test(s.added || '')) errs.push(`${at}: added must be YYYY-MM-DD`);
   if (typeof s.verified !== 'boolean') errs.push(`${at}: verified must be true or false`);
 }
+// ids that were later removed stay valid in older entries, so history isn't rewritten
+for (const c of data.changelog || []) for (const r of c.removed || []) if (r && r.id) ids.add(r.id);
 for (const c of data.changelog || []) {
   const at = `changelog ${c.date}`;
+  for (const r of c.removed || []) if (!r || !r.id || !r.name) errs.push(`${at}: removed entries need { id, name }`);
   if (!date.test(c.date || '')) errs.push(`${at}: date must be YYYY-MM-DD`);
   if (c.change !== undefined) errs.push(`${at}: use note/added/updated/verified, not free-text "change"`);
   if (!c.note && !['added', 'updated', 'verified', 'removed'].some(k => c[k]?.length)) errs.push(`${at}: needs a note or a non-empty added/updated/verified/removed list`);
