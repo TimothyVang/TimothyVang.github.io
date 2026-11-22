@@ -82,6 +82,52 @@
   .flag--new { background: var(--accent); color: var(--accent-ink); }
   .flags { display: flex; gap: 6px; flex-wrap: wrap; }
   .empty { padding-block: var(--s-8); color: var(--muted); }
+
+  /* The system sizes every section to exactly one screen. This page's sections are data-sized,
+     so each one fits its content with one even rhythm instead of leaving half-empty screens. */
+  main > section.section:not(.hero) { height: auto !important; min-height: 0 !important; padding-block: clamp(72px, 9vw, 120px); }
+  main > section.section:not(.hero) > .wrap { height: auto !important; }
+  main > section.section + section.section:not(.ground-inverse) { padding-top: 0; }
+  main > section.section.ground-inverse + section.section:not(.ground-inverse) { padding-top: clamp(72px, 9vw, 120px); }
+
+  /* the stack map: one band per layer, drawn from the data */
+  .stackmap { list-style: none; margin: var(--s-7) 0 0; padding: 0; display: grid; gap: 6px; }
+  .stackmap button { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; display: grid; grid-template-columns: 220px minmax(0, 1fr) 48px; align-items: center; gap: var(--s-5);
+    padding: 14px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; transition: border-color .2s, transform .2s; }
+  .stackmap button:hover { border-color: var(--accent); transform: translateX(4px); }
+  .stackmap button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .stackmap li.is-core button { border-color: color-mix(in oklab, var(--accent) 55%, transparent); background: color-mix(in oklab, var(--accent) 8%, var(--surface)); }
+  .sm__name { font: 500 16px/1.25 var(--font-text); color: var(--ink); }
+  .sm__chips { display: flex; flex-wrap: nowrap; gap: 6px; min-width: 0; overflow: hidden;
+    mask-image: linear-gradient(90deg, #000 88%, transparent); -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); }
+  .sm__chips span { font: 400 12px/1 var(--font-mono); padding: 5px 8px; border: 1px solid var(--line); border-radius: 3px; color: var(--ink); white-space: nowrap; }
+  .sm__n { font: 500 20px/1 var(--font-display); color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+  .sm__key { margin-top: var(--s-4); font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .sm__key i { width: 14px; height: 14px; border-radius: 3px; border: 1px solid color-mix(in oklab, var(--accent) 55%, transparent); background: color-mix(in oklab, var(--accent) 8%, var(--surface)); }
+  @media (max-width: 767px) {
+    .stackmap button { grid-template-columns: minmax(0, 1fr) 40px; gap: var(--s-2) var(--s-3); padding: 12px 14px; }
+    .sm__chips { grid-column: 1 / -1; grid-row: 2; }
+  }
+
+  /* changelog timeline */
+  .tl { list-style: none; margin: 0; padding: 0; }
+  .tl > li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: var(--s-2) var(--s-5); padding-block: var(--s-5); border-bottom: 1px solid var(--line); }
+  .tl > li:first-child { padding-top: 0; }
+  .tl time { font: 500 13px/1.6 var(--font-mono); color: var(--muted); padding-top: 2px; }
+  .tl__body { display: grid; gap: var(--s-3); min-width: 0; }
+  .tl__title { font: 500 var(--t-lead, 18px)/1.4 var(--font-text); color: var(--ink); margin: 0; }
+  .tl__note { color: var(--muted); margin: 0; font-size: 15px; }
+  .tl__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tl__group { display: grid; gap: var(--s-2); }
+  .tl__verb { font: 500 12px/1 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .tl__link { text-decoration: none; transition: border-color .15s, background .15s; }
+  .tl__link:hover { border-color: var(--accent); background: color-mix(in oklab, var(--accent) 12%, transparent); }
+  .card:target { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .card { scroll-margin-top: 96px; }
+  .tl details > summary { cursor: pointer; list-style: none; font: 500 13px/1 var(--font-text); color: var(--accent); margin-top: var(--s-2); }
+  .tl details > summary::-webkit-details-marker { display: none; }
+  .tl details[open] > summary { margin-bottom: var(--s-3); }
+  @media (max-width: 639px) { .tl > li { grid-template-columns: 1fr; } }
   .count { font-variant-numeric: tabular-nums; }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
@@ -135,9 +181,11 @@
         <div class="span-6 start-7 stack-4">
           <p>Each standard covers one layer of how an agent works. The core that every major vendor supports is MCP for tools, A2A between agents, AGENTS.md and Agent Skills for instructions, and OpenTelemetry GenAI for tracing.</p>
           <p class="muted">You add payments, identity and web standards only when your agent pays for something, acts for a user, or works on the open web.</p>
-          <a class="link" href="#standards">See every layer</a>
+          <a class="link" href="#standards">See every standard</a>
         </div>
       </div>
+      <ol class="stackmap" id="stackmap" aria-label="Layers of the AI agent stack"></ol>
+      <p class="sm__key"><i aria-hidden="true"></i>Highlighted rows hold the core that every major vendor supports. Select a layer to see its standards.</p>
     </div>
   </section>
 
@@ -193,7 +241,7 @@
           <p class="muted">Every change the agent made, newest first.</p>
           <a class="link" href="data/standards.json">Get the raw data</a>
         </div>
-        <div class="faq span-6 start-7" id="log"></div>
+        <ol class="tl span-6 start-7" id="log"></ol>
       </div>
     </div>
   </section>
@@ -248,9 +296,31 @@
   for (const c of companies) $('company').insertAdjacentHTML('beforeend', `<option>${esc(c)}</option>`);
 
   const log = [...data.changelog].reverse();
-  $('feed').innerHTML = log.slice(0, 6).map(c => `<div class="feed__ln"><time>${esc(c.date)}</time><span>${esc(c.change.length > 140 ? c.change.slice(0, 137) + '...' : c.change)}</span></div>`).join('') +
+  // Changelog entries are structured: { date, note?, added?: [id], updated?: [id], verified?: [id], removed?: [name] }.
+  const byId = Object.fromEntries(S.map(s => [s.id, s]));
+  const VERBS = [['added', 'Added'], ['updated', 'Updated'], ['verified', 'Verified'], ['removed', 'Removed']];
+  const tag = x => byId[x] ? `<a class="backer tl__link" href="#std-${esc(x)}">${esc(byId[x].name)}</a>` : `<span class="backer">${esc(x)}</span>`;
+  const entry = c => {
+    const groups = VERBS.filter(([k]) => c[k]?.length).map(([k, label]) => ({ label, items: c[k] }));
+    const head = groups.length
+      ? groups.map((g, i) => `${i ? g.label.toLowerCase() : g.label} ${g.items.length}${i ? '' : g.items.length === 1 ? ' standard' : ' standards'}`).join(', ')
+      : (c.note || c.change || '').replace(/\.$/, '');
+    const note = groups.length && (c.note || c.change) ? `<p class="tl__note">${esc((c.note || c.change).replace(/\.$/, ''))}</p>` : '';
+    const body = groups.map(g => g.items.length > 6
+      ? `<details><summary>${g.label}: show all ${g.items.length}</summary><div class="tl__tags">${g.items.map(tag).join('')}</div></details>`
+      : `<div class="tl__group"><span class="tl__verb">${g.label}</span><div class="tl__tags">${g.items.map(tag).join('')}</div></div>`).join('');
+    return `<p class="tl__title">${esc(head)}</p>${note}${body}`;
+  };
+  $('log').innerHTML = log.map(c => `<li><time>${esc(c.date)}</time><div class="tl__body">${entry(c)}</div></li>`).join('');
+
+  // hero panel: one line per run, newest first
+  const short = c => {
+    const parts = VERBS.filter(([k]) => c[k]?.length).map(([k, label]) => `${label.toLowerCase()} ${c[k].length}`);
+    const names = (c.added || []).slice(0, 2).map(x => byId[x]?.name).filter(Boolean);
+    return parts.length ? `${parts.join(', ')}${names.length ? ': ' + names.join(', ') + ((c.added || []).length > 2 ? ', ...' : '') : ''}` : (c.note || c.change || '');
+  };
+  $('feed').innerHTML = log.slice(0, 5).map(c => `<div class="feed__ln"><time>${esc(c.date)}</time><span>${esc(short(c))}</span></div>`).join('') +
     `<div class="feed__ln"><time></time><span class="feed__ok">validated · ${S.length} standards · pushed</span></div>`;
-  $('log').innerHTML = log.map(c => `<div class="faq__item"><h3>${esc(c.date)}</h3><p>${esc(c.change)}</p></div>`).join('');
 
   const active = new Set();
   for (const l of data.layers) {
@@ -268,7 +338,7 @@
       const items = S.filter(s => s.layer === l && hit(s));
       if (!items.length) return '';
       return `<div class="layer"><div class="layer__head"><h3>${esc(l)}</h3><span class="layer__n">${items.length}</span></div><div class="std">${items.map(s => `
-        <article class="card">
+        <article class="card" id="std-${esc(s.id)}">
           ${isNew(s) || !s.verified ? `<div class="flags">${isNew(s) ? '<span class="flag flag--new">new</span>' : ''}${s.verified ? '' : '<span class="flag flag--unv" title="Not yet checked against a primary source">unconfirmed</span>'}</div>` : ''}
           <h3><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a></h3>
           <p>${esc(s.summary)}</p>
@@ -280,6 +350,26 @@
   }
   $('q').oninput = render; $('company').onchange = render;
   render();
+
+  // stack map: per layer, the most-backed standards as chips
+  const CORE = new Set(['Agent protocols', 'Observability']);
+  $('stackmap').innerHTML = data.layers.map((l, i) => {
+    const items = S.filter(s => s.layer === l).sort((a, b) => b.backers.length - a.backers.length);
+    // prefer the acronym in parentheses (MCP, A2A, AP2); otherwise drop qualifiers
+    const short = n => { const m = n.match(/\(([A-Z0-9][A-Za-z0-9.\- ]{1,14})\)\s*$/); return m ? m[1] : n.replace(/\s*\(.*\)$/, '').replace(/ semantic conventions$/, '').replace(/^OpenAI-compatible /, ''); };
+    return `<li class="${CORE.has(l) ? 'is-core' : ''}"><button type="button" data-layer="${i}">
+      <span class="sm__name">${esc(l)}</span>
+      <span class="sm__chips">${items.slice(0, 5).map(s => `<span>${esc(short(s.name))}</span>`).join('')}</span>
+      <span class="sm__n">${items.length}</span></button></li>`;
+  }).join('');
+  $('stackmap').onclick = e => {
+    const b = e.target.closest('button[data-layer]'); if (!b) return;
+    const l = data.layers[+b.dataset.layer];
+    active.clear(); active.add(l);
+    for (const p of $('layers').children) p.setAttribute('aria-pressed', p.textContent === l);
+    render();
+    $('standards').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  };
 })();
 </script>
 <script type="module" src="assets/system.js"></script>

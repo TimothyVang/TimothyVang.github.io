@@ -33,7 +33,9 @@ Don't count:
 6. Check up to 5 entries that have `"verified": false` against primary sources. Fix any wrong facts, then set `verified` to true. If the facts can't be confirmed, leave the flag false.
 7. If anything changed:
    - set `updated` to today
-   - add one `changelog` entry for today that names what was added or changed
+   - add one `changelog` entry for today, written as structured data (never free text):
+     `{ "date": "YYYY-MM-DD", "note": "<one short sentence, optional>", "added": [ids], "updated": [ids], "verified": [ids] }`
+     Leave out any list that would be empty. Every id must exist in `standards[]`.
 8. In `state/candidates.json`, replace the `candidates` array with `[]` so judged items don't come back. Then run `bun scripts/validate.mjs`. If it fails, fix the JSON until it passes.
 9. If `git status` shows changes, commit `data/standards.json` and the `state/` files with the message `update: <short summary>`, then run `git push`. If nothing changed, commit only the `state/` files with the message `scan: no new standards` and push.
 

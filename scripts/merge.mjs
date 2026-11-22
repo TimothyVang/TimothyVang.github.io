@@ -15,7 +15,7 @@ const added = add.standards.filter(s => !ids.has(s.id) && !names.has(s.name.toLo
 data.standards.push(...added);
 if (added.length) {
   data.updated = today;
-  data.changelog.push({ date: today, change: `${note || 'Added'} (${added.length}): ${added.map(s => s.name).join(', ')}.` });
+  data.changelog.push({ date: today, note: note || 'Manual research pass.', added: added.map(s => s.id) });
 }
 await writeFile(target, JSON.stringify(data, null, 2) + '\n');
 console.log(`merged ${added.length}, skipped ${add.standards.length - added.length}`);

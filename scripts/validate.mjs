@@ -21,7 +21,14 @@ for (const [i, s] of (data.standards || []).entries()) {
   if (!date.test(s.added || '')) errs.push(`${at}: added must be YYYY-MM-DD`);
   if (typeof s.verified !== 'boolean') errs.push(`${at}: verified must be true or false`);
 }
-for (const c of data.changelog || []) if (!date.test(c.date) || !c.change) errs.push(`changelog entry malformed: ${JSON.stringify(c)}`);
+for (const c of data.changelog || []) {
+  const at = `changelog ${c.date}`;
+  if (!date.test(c.date || '')) errs.push(`${at}: date must be YYYY-MM-DD`);
+  if (c.change !== undefined) errs.push(`${at}: use note/added/updated/verified, not free-text "change"`);
+  if (!c.note && !['added', 'updated', 'verified', 'removed'].some(k => c[k]?.length)) errs.push(`${at}: needs a note or a non-empty added/updated/verified/removed list`);
+  for (const k of ['added', 'updated', 'verified'])
+    for (const id of c[k] || []) if (!ids.has(id)) errs.push(`${at}: ${k} lists unknown id "${id}"`);
+}
 
 if (errs.length) { console.error(errs.join('\n')); process.exit(1); }
 console.log(`valid: ${data.standards.length} standards, ${data.layers.length} layers`);

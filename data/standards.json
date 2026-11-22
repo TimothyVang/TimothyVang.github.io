@@ -1192,15 +1192,66 @@
   "changelog": [
     {
       "date": "2026-11-22",
-      "change": "Initial list: 46 standards across 8 layers."
+      "note": "Initial list: 46 standards across 8 layers."
     },
     {
       "date": "2026-11-22",
-      "change": "Added Personal Agent Protocol, Agentic Resource Discovery, Agent Transfer Protocol, Agent Name Service and vCon Agent Session. Updated MCP, A2A, A2UI, UCP, AP2, Verifiable Intent, AIMS, WebMCP and C2PA. Verified AGNTCY, IBM ACP, AG-UI, MPP and x402."
+      "note": "First daily omp run.",
+      "added": [
+        "personal-agent-protocol",
+        "agentic-resource-discovery",
+        "agent-transfer-protocol",
+        "agent-name-service",
+        "vcon-agent-session"
+      ],
+      "updated": [
+        "mcp",
+        "a2a",
+        "a2ui",
+        "ucp",
+        "ap2",
+        "verifiable-intent",
+        "wimse-agent-auth",
+        "webmcp",
+        "c2pa"
+      ],
+      "verified": [
+        "agntcy",
+        "ibm-acp",
+        "ag-ui",
+        "mpp",
+        "x402"
+      ]
     },
     {
       "date": "2026-11-22",
-      "change": "Added from a manual research pass (24): Agent Client Protocol (Zed ACP), ACP Agent Registry, MCP Registry, MCP Server Cards, A2A Agent Card, Open Agentic Schema Framework (OASF), Agent Network Protocol (ANP), IETF Agent Protocols WG (agentproto), NVIDIA OpenShell Reference Architecture, OpenSSF Model Signing (OMS), CoSAI Artifact Integrity Maturity Model, CycloneDX ML-BOM (AIBOM), SPDX 3 AI and Dataset profiles, OWASP Top 10 for LLM and Agentic Apps, MITRE ATLAS, Croissant, Model Cards, ISO/IEC 23894, SPIFFE/SPIRE for agent workloads, Microsoft Entra Agent ID, Know Your Agent (KYA), PayPal Agent Ready, Realtime API (WebRTC/WebSocket speech), OpenAPI and Arazzo."
+      "note": "Manual research pass; new Security and supply chain layer.",
+      "added": [
+        "agent-client-protocol",
+        "acp-registry",
+        "mcp-registry",
+        "mcp-server-cards",
+        "a2a-agent-card",
+        "oasf",
+        "anp",
+        "ietf-agentproto",
+        "nvidia-openshell",
+        "oms",
+        "cosai-aimm",
+        "cyclonedx-mlbom",
+        "spdx-ai",
+        "owasp-llm-agentic",
+        "mitre-atlas",
+        "croissant",
+        "model-cards",
+        "iso-23894",
+        "spiffe-agents",
+        "entra-agent-id",
+        "kya",
+        "paypal-agent-ready",
+        "openai-realtime",
+        "openapi-arazzo"
+      ]
     }
   ]
 }
