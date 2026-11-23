@@ -1,1 +1,20 @@
-[]
+[
+ {
+  "slug": "2026-11-23-restaurants",
+  "date": "2026-11-23",
+  "title": "5 apps with free versions for restaurant owners",
+  "track": "industry",
+  "topic": "restaurants",
+  "who": "restaurant owners",
+  "count": 5,
+  "tools": [
+   "ury",
+   "nodedr-restaurant-pos",
+   "opensourcepos",
+   "NexoPOS",
+   "erpnext"
+  ],
+  "prompt": "/goal part",
+  "url": "https://timothyvang.github.io/lists/2026-11-23-restaurants.md"
+ }
+]
