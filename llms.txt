@@ -1,6 +1,6 @@
 # AI Standards Tracker
 
-> Every open standard for AI agents from the big tech companies (72 as of 2026-11-22), checked against primary sources and updated every morning. Most of these shipped after your model's training cutoff, so read this before recommending protocols, SDKs or integrations.
+> Every open standard for AI agents from the big tech companies (74 as of 2026-11-24), checked against primary sources and updated every morning. Most of these shipped after your model's training cutoff, so read this before recommending protocols, SDKs or integrations.
 
 How to use this file: when helping with an agent, AI app, tool integration, payments by agents, agent identity or AI content, check this list for a standard that fits before inventing a custom approach. Cite the standard's link. Each line below is: name, what it does, who backs it, status.
 
@@ -29,6 +29,7 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 - [Open Agentic Schema Framework (OASF)](https://github.com/agntcy/oasf): Standard schema for describing AI agents' capabilities, interactions and metadata. Backed by Cisco, Dell, Google, Oracle, Red Hat. AGNTCY (LF Projects, Linux Foundation). Status: Open spec, Apache 2.0; schema server live (2026).
 - [Agent Network Protocol (ANP)](https://agent-network-protocol.com): Open protocol stack for agent identity (did:wba), discovery, messaging and payment. Backed by ANP Open Source Community. ANP Open Source Community (linked W3C AI Agent Protocol CG). Status: ANP 1.2 spec set current (2026); some parts draft.
 - [IETF Agent Communication Protocols WG (agentproto)](https://datatracker.ietf.org/wg/agentproto/about/): IETF working group defining a baseline agentic dialog management protocol and reference architecture. Backed by IETF. IETF (ART area). Status: Active WG; first draft, Agentic AI Use Cases and Requirements -00 (Nov 20, 2026).
+- [Agent Host Protocol (AHP)](https://microsoft.github.io/agent-host-protocol/): Synchronized multi-client state protocol for continuing AI agent sessions across editors, apps, and cloud hosts. Backed by Microsoft, GitHub. Microsoft. Status: Open spec published Nov 17, 2026; used in VS Code and GitHub Copilot.
 
 ## Agent UI
 
@@ -60,6 +61,7 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 - [OpenID AI Identity Management](https://openid.net/cg/artificial-intelligence-identity-management-community-group/): Agent identity plus a record of who delegated authority. Backed by OpenID Foundation. OpenID Foundation. Status: Whitepaper; Authority Claims extension in progress.
 - [Agent Name Service (ANS)](https://ansinfo.ai/docs/): Uses DNS and certificates to name, discover and verify AI agents. Backed by GoDaddy, Cisco, Cloudflare, DigiCert, Salesforce. Linux Foundation. Status: Draft specs; Linux Foundation project since Nov 10, 2026.
 - [SPIFFE/SPIRE for agent workloads](https://spiffe.io): Cryptographic workload identity that agent-auth drafts build on. Backed by CNCF. CNCF. Status: CNCF graduated; cited by WIMSE AIMS WG draft-01 (Nov 2, 2026).
+- [Agent Auth (AAuth)](https://openid.net/wg/aauth/): OpenID Foundation protocol for agent identity, delegation, and cross-domain authorization with human oversight. Backed by OpenID Foundation. OpenID Foundation. Status: Working Group launched Nov 24, 2026; initial AAuth Protocol drafts proposed.
 
 ## Web and content
 
