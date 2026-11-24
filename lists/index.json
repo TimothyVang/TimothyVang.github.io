@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-11-24-blue-team",
+  "date": "2026-11-24",
+  "title": "9 free tools to guard your company from hackers",
+  "track": "security",
+  "topic": "blue-team",
+  "who": "people who defend companies from hackers (blue team)",
+  "count": 9,
+  "tools": [
+   "securityonion",
+   "sigma",
+   "chainsaw",
+   "suricata",
+   "LOLBAS",
+   "graylog2-server",
+   "MISP",
+   "IntelOwl",
+   "tracecat"
+  ],
+  "prompt": "/goal part",
+  "url": "https://timothyvang.github.io/lists/2026-11-24-blue-team.md"
+ },
+ {
   "slug": "2026-11-23-restaurants",
   "date": "2026-11-23",
   "title": "5 apps with free versions for restaurant owners",
