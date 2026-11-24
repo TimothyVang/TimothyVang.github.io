@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-24",
   "layers": [
     "Agent protocols",
     "Agent UI",
@@ -1153,6 +1153,35 @@
       "url": "https://spec.openapis.org/",
       "added": "2026-11-22",
       "verified": true
+    },
+    {
+      "id": "openid-aauth",
+      "name": "Agent Auth (AAuth)",
+      "layer": "Identity and auth",
+      "backers": [
+        "OpenID Foundation"
+      ],
+      "body": "OpenID Foundation",
+      "status": "Working Group launched Nov 24, 2026; initial AAuth Protocol drafts proposed",
+      "summary": "OpenID Foundation protocol for agent identity, delegation, and cross-domain authorization with human oversight.",
+      "url": "https://openid.net/wg/aauth/",
+      "added": "2026-11-24",
+      "verified": true
+    },
+    {
+      "id": "agent-host-protocol",
+      "name": "Agent Host Protocol (AHP)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Microsoft",
+        "GitHub"
+      ],
+      "body": "Microsoft",
+      "status": "Open spec published Nov 17, 2026; used in VS Code and GitHub Copilot",
+      "summary": "Synchronized multi-client state protocol for continuing AI agent sessions across editors, apps, and cloud hosts.",
+      "url": "https://microsoft.github.io/agent-host-protocol/",
+      "added": "2026-11-24",
+      "verified": true
     }
   ],
   "changelog": [
@@ -1269,6 +1298,14 @@
           "id": "llama-stack",
           "name": "Llama Stack API"
         }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "note": "Daily update: added OpenID AAuth and Microsoft Agent Host Protocol.",
+      "added": [
+        "openid-aauth",
+        "agent-host-protocol"
       ]
     }
   ]
