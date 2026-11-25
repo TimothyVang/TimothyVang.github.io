@@ -8,6 +8,7 @@ Ask the person what they do for work, open the list below that fits them best, a
 
 ## All lists (newest first)
 
+- 2026-11-25: 7 open vision tools for drones and robots (for people building drones and robots that can see, 7 tools): https://timothyvang.github.io/lists/2026-11-25-drones-that-see.md
 - 2026-11-24: 9 free tools to guard your company from hackers (for people who defend companies from hackers (blue team), 9 tools): https://timothyvang.github.io/lists/2026-11-24-blue-team.md
 - 2026-11-23: 5 apps with free versions for restaurant owners (for restaurant owners, 5 tools): https://timothyvang.github.io/lists/2026-11-23-restaurants.md
 

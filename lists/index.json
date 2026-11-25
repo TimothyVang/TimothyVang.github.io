@@ -1,5 +1,25 @@
 [
  {
+  "slug": "2026-11-25-drones-that-see",
+  "date": "2026-11-25",
+  "title": "7 open vision tools for drones and robots",
+  "track": "drone-ai",
+  "topic": "drones-that-see",
+  "who": "people building drones and robots that can see",
+  "count": 7,
+  "tools": [
+   "tamserve",
+   "DepthPro2-focal",
+   "VisionHOPE",
+   "ultralytics",
+   "supervision",
+   "rf-detr-segmentation",
+   "label-studio"
+  ],
+  "prompt": "/goal part",
+  "url": "https://timothyvang.github.io/lists/2026-11-25-drones-that-see.md"
+ },
+ {
   "slug": "2026-11-24-blue-team",
   "date": "2026-11-24",
   "title": "9 free tools to guard your company from hackers",
