@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "layers": [
     "Agent protocols",
     "Agent UI",
@@ -235,7 +235,7 @@
         "Nomotic"
       ],
       "body": "Nomotic",
-      "status": "Individual draft -10 Oct 30, 2026; MCP mapping draft Nov 22, 2026",
+      "status": "Individual draft -10 Oct 30, 2026; MCP and Poppy mapping drafts Nov 22, 2026",
       "summary": "Defines a transfer protocol that carries signed agent identity and delegation and has a draft mapping for MCP.",
       "url": "https://datatracker.ietf.org/doc/draft-hood-independent-agtp/",
       "added": "2026-11-22",
@@ -865,7 +865,7 @@
         "MCP project"
       ],
       "body": "MCP project (Server Card Working Group)",
-      "status": "SEP-2127 Final (created Jan 21, 2026); experimental extension",
+      "status": "SEP-2127 Final; Beta extension (ext-server-card)",
       "summary": "Static metadata describing a remote MCP server so clients can discover and connect before a session.",
       "url": "https://modelcontextprotocol.io/seps/2127-mcp-server-cards",
       "added": "2026-11-22",
@@ -1182,6 +1182,21 @@
       "url": "https://microsoft.github.io/agent-host-protocol/",
       "added": "2026-11-24",
       "verified": true
+    },
+    {
+      "id": "mcp-skills",
+      "name": "Skills over MCP (SEP-2640)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Anthropic",
+        "MCP project"
+      ],
+      "body": "MCP project (Skills Over MCP Working Group)",
+      "status": "SEP-2640 Final (Sep 13, 2026); Beta extension, Claude public beta Nov 24, 2026",
+      "summary": "Official MCP extension for discovering and reading Agent Skills (SKILL.md) and supporting files from MCP servers.",
+      "url": "https://modelcontextprotocol.io/extensions/skills/overview",
+      "added": "2026-11-25",
+      "verified": true
     }
   ],
   "changelog": [
@@ -1306,6 +1321,17 @@
       "added": [
         "openid-aauth",
         "agent-host-protocol"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "note": "Daily update: added Skills over MCP (SEP-2640) and updated MCP Server Cards and AGTP statuses.",
+      "added": [
+        "mcp-skills"
+      ],
+      "updated": [
+        "mcp-server-cards",
+        "agent-transfer-protocol"
       ]
     }
   ]
