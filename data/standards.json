@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "layers": [
     "Agent protocols",
     "Agent UI",
@@ -307,13 +307,14 @@
       "backers": [
         "OpenAI",
         "Stripe",
+        "Meta",
         "Shopify",
         "Etsy"
       ],
-      "body": "OpenAI and Stripe",
-      "status": "Spec beta; now mostly product feeds in ChatGPT",
+      "body": "ACP Technical Steering Committee (OpenAI, Stripe, Meta)",
+      "status": "Beta (spec 2026-04-17); Meta joined OpenAI and Stripe on TSC",
       "summary": "Checkout and product feeds between agents and merchants.",
-      "url": "https://www.agenticcommerce.dev",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol",
       "added": "2026-11-22",
       "verified": true
     },
@@ -682,9 +683,9 @@
         "Elastic"
       ],
       "body": "CNCF OpenTelemetry",
-      "status": "Development; gen_ai.system renamed gen_ai.provider.name",
+      "status": "v0.1.0 standalone release Nov 21, 2026 (Development); adds A2A and agent spans",
       "summary": "Standard trace attributes for LLM and agent calls.",
-      "url": "https://github.com/open-telemetry/semantic-conventions",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai",
       "added": "2026-11-22",
       "verified": true
     },
@@ -817,7 +818,7 @@
         "Cursor"
       ],
       "body": "Zed Industries and JetBrains (Apache 2.0)",
-      "status": "JetBrains IDE support from Dec 2025; Claude Agent and Codex available via ACP",
+      "status": "Schema v1.35.0 and v2.0.0-beta.4 (Nov 23, 2026); supported in Zed and JetBrains IDEs",
       "summary": "Any coding agent works inside any editor, like LSP for agents.",
       "url": "https://agentclientprotocol.com",
       "added": "2026-11-22",
@@ -940,14 +941,17 @@
       "layer": "Security and supply chain",
       "backers": [
         "Nvidia",
+        "Red Hat",
+        "Docker",
+        "Canonical",
         "Oracle",
         "SAP",
         "ServiceNow"
       ],
-      "body": "Nvidia",
-      "status": "Launched Oct 2026",
-      "summary": "Reference design for running and enforcing policy on enterprise agents.",
-      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-OpenShell-Reference-Architecture-for-Safe-AI-Agents/default.aspx",
+      "body": "CNCF",
+      "status": "Launched Oct 2026; joined CNCF Sandbox Nov 10, 2026",
+      "summary": "Reference design and open runtime for governing and enforcing policy on autonomous agents.",
+      "url": "https://www.cncf.io/blog/2026/11/10/welcoming-openshell-to-the-cncf-open-governance-to-secure-agentic-ai/",
       "added": "2026-11-22",
       "verified": true
     },
@@ -1197,6 +1201,51 @@
       "url": "https://modelcontextprotocol.io/extensions/skills/overview",
       "added": "2026-11-25",
       "verified": true
+    },
+    {
+      "id": "ai-catalog",
+      "name": "AI Catalog",
+      "layer": "Agent protocols",
+      "backers": [
+        "Google",
+        "Microsoft",
+        "Anthropic",
+        "PulseMCP"
+      ],
+      "body": "AI Catalog Working Group (Linux Foundation)",
+      "status": "v0.9.0 (1.0 RC) released Nov 22, 2026",
+      "summary": "Typed JSON catalog at /.well-known/ai-catalog.json for discovering MCP servers, A2A agents, skills, plugins, datasets and models.",
+      "url": "https://github.com/Agent-Card/ai-catalog",
+      "added": "2026-11-26",
+      "verified": true
+    },
+    {
+      "id": "mcp-events",
+      "name": "MCP Events (SEP-3415)",
+      "layer": "Agent protocols",
+      "backers": [
+        "MCP project"
+      ],
+      "body": "MCP project (Tasks and Events Working Group)",
+      "status": "SEP-3415 Final; Beta extension (Nov 2026)",
+      "summary": "Official MCP extension letting agents subscribe to upstream events via poll, push or signed webhooks.",
+      "url": "https://modelcontextprotocol.io/extensions/events/overview",
+      "added": "2026-11-26",
+      "verified": true
+    },
+    {
+      "id": "owasp-acs",
+      "name": "OWASP Agent Control Standard (ACS)",
+      "layer": "Security and supply chain",
+      "backers": [
+        "OWASP"
+      ],
+      "body": "OWASP GenAI Security Project",
+      "status": "Spec v0.1.0; release 0.1.5 published Nov 20, 2026",
+      "summary": "JSON-RPC wire protocol, trace schema and AgBOM profile for runtime policy enforcement on AI agent actions.",
+      "url": "https://github.com/GenAI-Security-Project/agent-control-standard",
+      "added": "2026-11-26",
+      "verified": true
     }
   ],
   "changelog": [
@@ -1332,6 +1381,21 @@
       "updated": [
         "mcp-server-cards",
         "agent-transfer-protocol"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "note": "Daily update: added AI Catalog, MCP Events and OWASP ACS; updated OpenTelemetry GenAI, OpenShell, ACP and Zed ACP.",
+      "added": [
+        "ai-catalog",
+        "mcp-events",
+        "owasp-acs"
+      ],
+      "updated": [
+        "acp-commerce",
+        "otel-genai",
+        "agent-client-protocol",
+        "nvidia-openshell"
       ]
     }
   ]
