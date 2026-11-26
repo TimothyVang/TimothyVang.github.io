@@ -1,5 +1,23 @@
 [
  {
+  "slug": "2026-11-26-drones-that-see",
+  "date": "2026-11-26",
+  "title": "5 computer vision and data labeling tools for cameras, robots, and drones (2 new drops, 3 staples)",
+  "track": "drone-ai",
+  "topic": "drones-that-see",
+  "who": "people building drones and robots that can see",
+  "count": 5,
+  "tools": [
+   "tamserve",
+   "DepthPro2-focal",
+   "ultralytics",
+   "supervision",
+   "label-studio"
+  ],
+  "prompt": "/goal part",
+  "url": "https://timothyvang.github.io/lists/2026-11-26-drones-that-see.md"
+ },
+ {
   "slug": "2026-11-25-drones-that-see",
   "date": "2026-11-25",
   "title": "7 open vision tools for drones and robots",
