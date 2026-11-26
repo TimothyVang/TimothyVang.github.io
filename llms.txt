@@ -1,6 +1,6 @@
 # AI Standards Tracker
 
-> Every open standard for AI agents from the big tech companies (75 as of 2026-11-25), checked against primary sources and updated every morning. Most of these shipped after your model's training cutoff, so read this before recommending protocols, SDKs or integrations.
+> Every open standard for AI agents from the big tech companies (78 as of 2026-11-26), checked against primary sources and updated every morning. Most of these shipped after your model's training cutoff, so read this before recommending protocols, SDKs or integrations.
 
 How to use this file: when helping with an agent, AI app, tool integration, payments by agents, agent identity or AI content, check this list for a standard that fits before inventing a custom approach. Cite the standard's link. Each line below is: name, what it does, who backs it, status.
 
@@ -21,7 +21,7 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 - [Personal Agent Protocol (Poppy)](https://personalagentprotocol.org/docs/1.0/spec): Lets personal AI agents discover and use a company's website, APIs or agent with the user's permission. Backed by Sierra, Meta, Shopify, Stripe, Salesforce. Sierra and Meta. Status: v1.0 released Nov 13, 2026.
 - [Agentic Resource Discovery (ARD)](https://agenticresourcediscovery.org/spec/): Defines how AI clients discover tools, skills, APIs and agents across independent registries. Backed by Google, Hugging Face, Microsoft, GoDaddy. Agentic Resource Discovery working group. Status: Proposal v0.91 (Aug 26, 2026).
 - [Agent Transfer Protocol (AGTP)](https://datatracker.ietf.org/doc/draft-hood-independent-agtp/): Defines a transfer protocol that carries signed agent identity and delegation and has a draft mapping for MCP. Backed by Nomotic. Nomotic. Status: Individual draft -10 Oct 30, 2026; MCP and Poppy mapping drafts Nov 22, 2026.
-- [Agent Client Protocol (Zed ACP)](https://agentclientprotocol.com): Any coding agent works inside any editor, like LSP for agents. Backed by Zed, JetBrains, Google, Docker, Anthropic, OpenAI, Cursor. Zed Industries and JetBrains (Apache 2.0). Status: JetBrains IDE support from Dec 2025; Claude Agent and Codex available via ACP.
+- [Agent Client Protocol (Zed ACP)](https://agentclientprotocol.com): Any coding agent works inside any editor, like LSP for agents. Backed by Zed, JetBrains, Google, Docker, Anthropic, OpenAI, Cursor. Zed Industries and JetBrains (Apache 2.0). Status: Schema v1.35.0 and v2.0.0-beta.4 (Nov 23, 2026); supported in Zed and JetBrains IDEs.
 - [ACP Agent Registry](https://zed.dev/blog/acp-registry): Shared directory of coding agents installable in any ACP editor. Backed by JetBrains, Zed, Cursor, Factory. JetBrains and Zed. Status: Beta since Jan 28, 2026.
 - [MCP Registry](https://registry.modelcontextprotocol.io): Central discovery API for public MCP servers. Backed by Anthropic, GitHub, Microsoft, AWS. MCP project (AAIF). Status: Preview; 3,000+ servers in early 2026.
 - [MCP Server Cards (SEP-2127)](https://modelcontextprotocol.io/seps/2127-mcp-server-cards): Static metadata describing a remote MCP server so clients can discover and connect before a session. Backed by MCP project. MCP project (Server Card Working Group). Status: SEP-2127 Final; Beta extension (ext-server-card).
@@ -31,6 +31,8 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 - [IETF Agent Communication Protocols WG (agentproto)](https://datatracker.ietf.org/wg/agentproto/about/): IETF working group defining a baseline agentic dialog management protocol and reference architecture. Backed by IETF. IETF (ART area). Status: Active WG; first draft, Agentic AI Use Cases and Requirements -00 (Nov 20, 2026).
 - [Agent Host Protocol (AHP)](https://microsoft.github.io/agent-host-protocol/): Synchronized multi-client state protocol for continuing AI agent sessions across editors, apps, and cloud hosts. Backed by Microsoft, GitHub. Microsoft. Status: Open spec published Nov 17, 2026; used in VS Code and GitHub Copilot.
 - [Skills over MCP (SEP-2640)](https://modelcontextprotocol.io/extensions/skills/overview): Official MCP extension for discovering and reading Agent Skills (SKILL.md) and supporting files from MCP servers. Backed by Anthropic, MCP project. MCP project (Skills Over MCP Working Group). Status: SEP-2640 Final (Sep 13, 2026); Beta extension, Claude public beta Nov 24, 2026.
+- [AI Catalog](https://github.com/Agent-Card/ai-catalog): Typed JSON catalog at /.well-known/ai-catalog.json for discovering MCP servers, A2A agents, skills, plugins, datasets and models. Backed by Google, Microsoft, Anthropic, PulseMCP. AI Catalog Working Group (Linux Foundation). Status: v0.9.0 (1.0 RC) released Nov 22, 2026.
+- [MCP Events (SEP-3415)](https://modelcontextprotocol.io/extensions/events/overview): Official MCP extension letting agents subscribe to upstream events via poll, push or signed webhooks. Backed by MCP project. MCP project (Tasks and Events Working Group). Status: SEP-3415 Final; Beta extension (Nov 2026).
 
 ## Agent UI
 
@@ -41,7 +43,7 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 
 ## Commerce and payments
 
-- [Agentic Commerce Protocol (ACP)](https://www.agenticcommerce.dev): Checkout and product feeds between agents and merchants. Backed by OpenAI, Stripe, Shopify, Etsy. OpenAI and Stripe. Status: Spec beta; now mostly product feeds in ChatGPT.
+- [Agentic Commerce Protocol (ACP)](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol): Checkout and product feeds between agents and merchants. Backed by OpenAI, Stripe, Meta, Shopify, Etsy. ACP Technical Steering Committee (OpenAI, Stripe, Meta). Status: Beta (spec 2026-04-17); Meta joined OpenAI and Stripe on TSC.
 - [Shared Payment Tokens (SPT)](https://docs.stripe.com/agentic-commerce/concepts/shared-payment-tokens): Scoped grants with amount and expiry limits that let a seller charge a buyer's payment method. Backed by Stripe. Stripe. Status: Preview API (Stripe-Version 2026-09-30.preview); US, CA, EU.
 - [Machine Payments Protocol (MPP)](https://mpp.dev/): Lets agents and services exchange HTTP 402 payment requests, credentials and receipts across payment rails. Backed by Stripe, Tempo, Visa. MPP project (Tempo and Stripe). Status: Launched Mar 18, 2026; individual Internet-Draft -01 Sep 9, 2026.
 - [Universal Commerce Protocol (UCP)](https://ucp.dev/latest/specification/overview/): Discovery, cart, checkout and after-sales for agent shoppers. Backed by Google, Shopify, Walmart, Target. Google and Shopify. Status: Spec 2026-08-25.
@@ -76,7 +78,7 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 ## Observability
 
 - [vCon Agent Session](https://github.com/vcon-dev/draft-howe-vcon-agent-session/releases/tag/v0.1.0): Embeds an AI agent's execution trace in the same signed vCon record as its conversation. Backed by Vconic. vcon-dev. Status: Project draft v0.1.0 May 20, 2026; individual I-D expired Nov 21, 2026.
-- [OpenTelemetry GenAI semantic conventions](https://github.com/open-telemetry/semantic-conventions): Standard trace attributes for LLM and agent calls. Backed by Microsoft, Google, AWS, Datadog, Elastic. CNCF OpenTelemetry. Status: Development; gen_ai.system renamed gen_ai.provider.name.
+- [OpenTelemetry GenAI semantic conventions](https://github.com/open-telemetry/semantic-conventions-genai): Standard trace attributes for LLM and agent calls. Backed by Microsoft, Google, AWS, Datadog, Elastic. CNCF OpenTelemetry. Status: v0.1.0 standalone release Nov 21, 2026 (Development); adds A2A and agent spans.
 
 ## Model formats and APIs
 
@@ -100,13 +102,14 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 
 ## Security and supply chain
 
-- [NVIDIA OpenShell Reference Architecture](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-OpenShell-Reference-Architecture-for-Safe-AI-Agents/default.aspx): Reference design for running and enforcing policy on enterprise agents. Backed by Nvidia, Oracle, SAP, ServiceNow. Nvidia. Status: Launched Oct 2026.
+- [NVIDIA OpenShell Reference Architecture](https://www.cncf.io/blog/2026/11/10/welcoming-openshell-to-the-cncf-open-governance-to-secure-agentic-ai/): Reference design and open runtime for governing and enforcing policy on autonomous agents. Backed by Nvidia, Red Hat, Docker, Canonical, Oracle, SAP, ServiceNow. CNCF. Status: Launched Oct 2026; joined CNCF Sandbox Nov 10, 2026.
 - [OpenSSF Model Signing (OMS)](https://github.com/sigstore/model-transparency): Sigstore-based signatures that bind model files to their publisher. Backed by Google, Nvidia, HiddenLayer, OpenSSF. OpenSSF (Linux Foundation). Status: v1.0 (2025); CLI 1.1.x in use.
 - [AIMM: Artifact Integrity Maturity Model](https://github.com/cosai-oasis/ws1-supply-chain/blob/main/whitepapers/aimm-artifact-integrity-maturity-model.md): Three maturity levels for signing, provenance and policy attestations of AI/ML artifacts. Backed by Google, Microsoft, IBM, NVIDIA, OpenAI, Anthropic, Intel, Red Hat, PayPal. Coalition for Secure AI (OASIS Open Project), Workstream 1. Status: Approved by CoSAI Governing Board Sep 7, 2026.
 - [CycloneDX ML-BOM (AIBOM)](https://cyclonedx.org/capabilities/mlbom/): Bill of materials for ML models, datasets, their dependencies and provenance. Backed by OWASP Foundation, Ecma International. OWASP / Ecma TC54. Status: CycloneDX 1.7 (Oct 2025) = ECMA-424 2nd ed. (Dec 2025); 2.0 in work.
 - [SPDX 3 AI and Dataset profiles](https://spdx.github.io/spdx-spec/v3.0.1/model/AI/AI/): SBOM profiles that describe AI models and the datasets used to train them. Backed by Linux Foundation. SPDX (Linux Foundation). Status: SPDX 3.0.1 (Dec 2024) latest; 3.1-RC1 (Jan 2026) updates AI and Dataset profiles.
 - [OWASP Top 10 for LLM Applications and Top 10 for Agentic Applications](https://genai.owasp.org): Reference lists of the top security risks and mitigations for LLM and agentic apps. Backed by OWASP. OWASP GenAI Security Project. Status: LLM Top 10 2026 (Sep 2026); Agentic Top 10 for 2026 (Dec 9, 2025).
 - [MITRE ATLAS (Adversarial Threat Landscape for AI Systems)](https://atlas.mitre.org): ATT&CK-style knowledge base of adversary tactics, techniques and case studies against AI systems. Backed by MITRE. MITRE. Status: Monthly releases; latest v2026.10 (Oct 28, 2026).
+- [OWASP Agent Control Standard (ACS)](https://github.com/GenAI-Security-Project/agent-control-standard): JSON-RPC wire protocol, trace schema and AgBOM profile for runtime policy enforcement on AI agent actions. Backed by OWASP. OWASP GenAI Security Project. Status: Spec v0.1.0; release 0.1.5 published Nov 20, 2026.
 
 ## More
 
