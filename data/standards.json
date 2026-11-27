@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "layers": [
     "Agent protocols",
     "Agent UI",
@@ -139,8 +139,8 @@
         "Adobe",
         "Huawei"
       ],
-      "body": "Linux Foundation (LF Projects)",
-      "status": "LF project, donated by Solo.io (2025); active 2026",
+      "body": "AAIF (Linux Foundation)",
+      "status": "Joined AAIF Jun 4, 2026; v1.7.0 released Oct 27, 2026",
       "summary": "Open source proxy for MCP and A2A traffic between agents, tools and models.",
       "url": "https://agentgateway.dev",
       "added": "2026-11-22",
@@ -204,7 +204,7 @@
         "Salesforce"
       ],
       "body": "Sierra and Meta",
-      "status": "v1.0 released Nov 13, 2026",
+      "status": "v1.0 released Nov 13, 2026; draft v1.1 in progress",
       "summary": "Lets personal AI agents discover and use a company's website, APIs or agent with the user's permission.",
       "url": "https://personalagentprotocol.org/docs/1.0/spec",
       "added": "2026-11-22",
@@ -439,7 +439,7 @@
         "Google"
       ],
       "body": "x402 Foundation (Linux Foundation)",
-      "status": "v2 Dec 2025; foundation operational Jul 14, 2026",
+      "status": "v2 Dec 2025; LF x402 Foundation operational Jul 14, 2026, ED appointed Oct 1, 2026",
       "summary": "Lets agents and applications pay for APIs and other resources using HTTP 402 and extensible payment schemes.",
       "url": "https://x402.org/",
       "added": "2026-11-22",
@@ -901,7 +901,7 @@
         "Red Hat"
       ],
       "body": "AGNTCY (LF Projects, Linux Foundation)",
-      "status": "Open spec, Apache 2.0; schema server live (2026)",
+      "status": "v1.1.0 released Jul 10, 2026; Apache 2.0, schema server live",
       "summary": "Standard schema for describing AI agents' capabilities, interactions and metadata.",
       "url": "https://github.com/agntcy/oasf",
       "added": "2026-11-22",
@@ -1246,6 +1246,100 @@
       "url": "https://github.com/GenAI-Security-Project/agent-control-standard",
       "added": "2026-11-26",
       "verified": true
+    },
+    {
+      "id": "docker-sandbox-kit",
+      "name": "Docker Sandbox Kit Specification",
+      "layer": "Security and supply chain",
+      "backers": [
+        "Docker",
+        "CNCF",
+        "AWS",
+        "Datadog",
+        "Palo Alto Networks",
+        "Snyk"
+      ],
+      "body": "Docker (proposed to CNCF)",
+      "status": "Experimental v3 (v3.0.0-m.14 released Nov 26, 2026); final planned Q4 2026",
+      "summary": "OCI image specification for packaging an AI agent, its tools and declared runtime permissions in a single verifiable artifact.",
+      "url": "https://github.com/docker/sandbox-kit-spec",
+      "added": "2026-11-27",
+      "verified": true
+    },
+    {
+      "id": "agent-plugins",
+      "name": "Agent Plugins",
+      "layer": "Agent protocols",
+      "backers": [
+        "Amazon",
+        "Cursor",
+        "Microsoft",
+        "OpenAI",
+        "Vercel"
+      ],
+      "body": "Agent Plugins Technical Steering Committee",
+      "status": "v1.0.0 published (Aug 2026); v1.1.0 working draft",
+      "summary": "Open, vendor-neutral package format for distributing Agent Skills and MCP server configurations together across compatible clients.",
+      "url": "https://github.com/agentplugins/agent-plugins-spec",
+      "added": "2026-11-27",
+      "verified": true
+    },
+    {
+      "id": "owasp-aisvs",
+      "name": "OWASP AI Security Verification Standard (AISVS)",
+      "layer": "Security and supply chain",
+      "backers": [
+        "OWASP"
+      ],
+      "body": "OWASP",
+      "status": "v1.01 stable (Oct 16, 2026); 1.02 in development",
+      "summary": "Structured catalogue of testable security verification requirements across 12 chapters covering models, RAG, agents and MCP.",
+      "url": "https://github.com/OWASP/AISVS",
+      "added": "2026-11-27",
+      "verified": true
+    },
+    {
+      "id": "mcp-tasks",
+      "name": "MCP Tasks (SEP-2663)",
+      "layer": "Agent protocols",
+      "backers": [
+        "MCP project"
+      ],
+      "body": "MCP project",
+      "status": "Beta extension (to Core); 2026-07-28 schema stable, ext-tasks v0.2.3 (Nov 4, 2026)",
+      "summary": "Official MCP extension for asynchronous long-running operations with durable task handles, polling and mid-flight client input.",
+      "url": "https://modelcontextprotocol.io/extensions/tasks/overview",
+      "added": "2026-11-27",
+      "verified": true
+    },
+    {
+      "id": "agntcy-slim",
+      "name": "Secure Low-Latency Interactive Messaging (SLIM)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Cisco",
+        "Linux Foundation"
+      ],
+      "body": "AGNTCY (LF Projects, Linux Foundation)",
+      "status": "Individual I-D draft-mpsb-agntcy-slim-03 (Nov 2, 2026)",
+      "summary": "Name-routed gRPC and WebSocket messaging data plane with optional MLS end-to-end encryption for A2A, MCP and multi-agent sessions.",
+      "url": "https://datatracker.ietf.org/doc/draft-mpsb-agntcy-slim/",
+      "added": "2026-11-27",
+      "verified": true
+    },
+    {
+      "id": "oracle-agent-spec",
+      "name": "Open Agent Specification (Agent Spec)",
+      "layer": "Agent protocols",
+      "backers": [
+        "Oracle"
+      ],
+      "body": "Oracle",
+      "status": "v26.3.1 released Sep 11, 2026; Apache 2.0 / UPL 1.0",
+      "summary": "Framework-agnostic declarative JSON and YAML language for defining portable standalone AI agents and structured agentic workflows.",
+      "url": "https://github.com/oracle/agent-spec",
+      "added": "2026-11-27",
+      "verified": true
     }
   ],
   "changelog": [
@@ -1396,6 +1490,24 @@
         "otel-genai",
         "agent-client-protocol",
         "nvidia-openshell"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "note": "Daily update: added Docker Sandbox Kit Spec, Agent Plugins, OWASP AISVS, MCP Tasks, AGNTCY SLIM and Oracle Agent Spec; updated agentgateway, Poppy, x402 and OASF.",
+      "added": [
+        "docker-sandbox-kit",
+        "agent-plugins",
+        "owasp-aisvs",
+        "mcp-tasks",
+        "agntcy-slim",
+        "oracle-agent-spec"
+      ],
+      "updated": [
+        "agentgateway",
+        "personal-agent-protocol",
+        "x402",
+        "oasf"
       ]
     }
   ]
