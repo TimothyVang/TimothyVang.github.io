@@ -1,5 +1,24 @@
 [
  {
+  "slug": "2026-11-27-three-d-model-generation",
+  "date": "2026-11-27",
+  "title": "6 free open 3d tools and ai models for games",
+  "track": "game-ai",
+  "topic": "3d-model-generation",
+  "who": "game makers and artists who want AI to make 3D models",
+  "count": 6,
+  "tools": [
+   "image-to-3dlab",
+   "img2threejs",
+   "Qwen3.5-4B-GLB-3D-Coder",
+   "Qwen3.5-4B-3D-Coder",
+   "ooosplat",
+   "GameFactory-3A"
+  ],
+  "prompt": "/goal part",
+  "url": "https://timothyvang.github.io/lists/2026-11-27-three-d-model-generation.md"
+ },
+ {
   "slug": "2026-11-26-drones-that-see",
   "date": "2026-11-26",
   "title": "5 computer vision and data labeling tools for cameras, robots, and drones (2 new drops, 3 staples)",
