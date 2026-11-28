@@ -1,5 +1,24 @@
 [
  {
+  "slug": "2026-11-28-clinics",
+  "date": "2026-11-28",
+  "title": "6 free tools for doctors offices and clinics",
+  "track": "industry",
+  "topic": "clinics",
+  "who": "doctors offices and clinics",
+  "count": 6,
+  "tools": [
+   "medTimer",
+   "iiab",
+   "Viewers",
+   "openmrs-core",
+   "medical-research-skills",
+   "open-wearables"
+  ],
+  "prompt": "/goal part",
+  "url": "https://timothyvang.github.io/lists/2026-11-28-clinics.md"
+ },
+ {
   "slug": "2026-11-27-three-d-model-generation",
   "date": "2026-11-27",
   "title": "6 free open 3d tools and ai models for games",

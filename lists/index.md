@@ -8,6 +8,7 @@ Ask the person what they do for work, open the list below that fits them best, a
 
 ## All lists (newest first)
 
+- 2026-11-28: 6 free tools for doctors offices and clinics (for doctors offices and clinics, 6 tools): https://timothyvang.github.io/lists/2026-11-28-clinics.md
 - 2026-11-27: 6 free open 3d tools and ai models for games (for game makers and artists who want AI to make 3D models, 6 tools): https://timothyvang.github.io/lists/2026-11-27-three-d-model-generation.md
 - 2026-11-26: 5 computer vision and data labeling tools for cameras, robots, and drones (2 new drops, 3 staples) (for people building drones and robots that can see, 5 tools): https://timothyvang.github.io/lists/2026-11-26-drones-that-see.md
 - 2026-11-25: 7 open vision tools for drones and robots (for people building drones and robots that can see, 7 tools): https://timothyvang.github.io/lists/2026-11-25-drones-that-see.md
