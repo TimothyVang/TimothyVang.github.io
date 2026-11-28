@@ -1,6 +1,6 @@
 # AI Standards Tracker
 
-> Every open standard for AI agents from the big tech companies (84 as of 2026-11-27), checked against primary sources and updated every morning. Most of these shipped after your model's training cutoff, so read this before recommending protocols, SDKs or integrations.
+> Every open standard for AI agents from the big tech companies (86 as of 2026-11-28), checked against primary sources and updated every morning. Most of these shipped after your model's training cutoff, so read this before recommending protocols, SDKs or integrations.
 
 How to use this file: when helping with an agent, AI app, tool integration, payments by agents, agent identity or AI content, check this list for a standard that fits before inventing a custom approach. Cite the standard's link. Each line below is: name, what it does, who backs it, status.
 
@@ -9,7 +9,7 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 ## Agent protocols
 
 - [Model Context Protocol (MCP)](https://modelcontextprotocol.io): Connects agents to tools, data and prompts. Backed by Anthropic, OpenAI, Google, Microsoft, AWS. AAIF (Linux Foundation). Status: Spec 2026-07-28; founding AAIF project.
-- [Agent2Agent (A2A)](https://a2a-protocol.org): Agents discover each other, hand off tasks and exchange messages. Backed by Google, Salesforce, SAP, ServiceNow, IBM, Microsoft. AAIF (Linux Foundation). Status: v1.0.1 patch May 2026; joined AAIF Aug 17, 2026.
+- [Agent2Agent (A2A)](https://a2a-protocol.org): Agents discover each other, hand off tasks and exchange messages. Backed by Google, Salesforce, SAP, ServiceNow, IBM, Microsoft. AAIF (Linux Foundation). Status: v1.0.1 (May 2026); v1.1.0-rc tagged Oct 29, 2026; joined AAIF Aug 17, 2026.
 - [AGENTS.md](https://agents.md): One instruction file for coding agents at the root of a repo. Backed by OpenAI, Google, Cursor, Factory. AAIF (Linux Foundation). Status: Founding AAIF project (Dec 2025).
 - [Agent Skills (SKILL.md)](https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects): Folders of instructions and scripts an agent loads on demand. Backed by Anthropic, OpenAI, Microsoft. AAIF (Linux Foundation). Status: Joined AAIF Oct 22, 2026.
 - [OpenEnv](https://aaif.io/news/agentic-ai-foundation-announces-four-new-projects): Standard environments for agent RL training and evals. Backed by Hugging Face, Meta. AAIF (Linux Foundation). Status: Joined AAIF Oct 22, 2026.
@@ -30,7 +30,7 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 - [Agent Network Protocol (ANP)](https://agent-network-protocol.com): Open protocol stack for agent identity (did:wba), discovery, messaging and payment. Backed by ANP Open Source Community. ANP Open Source Community (linked W3C AI Agent Protocol CG). Status: ANP 1.2 spec set current (2026); some parts draft.
 - [IETF Agent Communication Protocols WG (agentproto)](https://datatracker.ietf.org/wg/agentproto/about/): IETF working group defining a baseline agentic dialog management protocol and reference architecture. Backed by IETF. IETF (ART area). Status: Active WG; first draft, Agentic AI Use Cases and Requirements -00 (Nov 20, 2026).
 - [Agent Host Protocol (AHP)](https://microsoft.github.io/agent-host-protocol/): Synchronized multi-client state protocol for continuing AI agent sessions across editors, apps, and cloud hosts. Backed by Microsoft, GitHub. Microsoft. Status: Open spec published Nov 17, 2026; used in VS Code and GitHub Copilot.
-- [Skills over MCP (SEP-2640)](https://modelcontextprotocol.io/extensions/skills/overview): Official MCP extension for discovering and reading Agent Skills (SKILL.md) and supporting files from MCP servers. Backed by Anthropic, MCP project. MCP project (Skills Over MCP Working Group). Status: SEP-2640 Final (Sep 13, 2026); Beta extension, Claude public beta Nov 24, 2026.
+- [Skills over MCP (SEP-2640)](https://modelcontextprotocol.io/extensions/skills/overview): Official MCP extension for discovering and reading Agent Skills (SKILL.md) and supporting files from MCP servers. Backed by Anthropic, MCP project. MCP project (Skills Over MCP Working Group). Status: SEP-2640 Final (Sep 13, 2026); Beta extension ext-skills v0.1.0 (Nov 20, 2026); Claude public beta Nov 24, 2026.
 - [AI Catalog](https://github.com/Agent-Card/ai-catalog): Typed JSON catalog at /.well-known/ai-catalog.json for discovering MCP servers, A2A agents, skills, plugins, datasets and models. Backed by Google, Microsoft, Anthropic, PulseMCP. AI Catalog Working Group (Linux Foundation). Status: v0.9.0 (1.0 RC) released Nov 22, 2026.
 - [MCP Events (SEP-3415)](https://modelcontextprotocol.io/extensions/events/overview): Official MCP extension letting agents subscribe to upstream events via poll, push or signed webhooks. Backed by MCP project. MCP project (Tasks and Events Working Group). Status: SEP-3415 Final; Beta extension (Nov 2026).
 - [Agent Plugins](https://github.com/agentplugins/agent-plugins-spec): Open, vendor-neutral package format for distributing Agent Skills and MCP server configurations together across compatible clients. Backed by Amazon, Cursor, Microsoft, OpenAI, Vercel. Agent Plugins Technical Steering Committee. Status: v1.0.0 published (Aug 2026); v1.1.0 working draft.
@@ -40,7 +40,7 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 
 ## Agent UI
 
-- [MCP Apps](https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/): MCP servers render interactive UI inside the host chat. Backed by Anthropic, OpenAI. MCP project (AAIF). Status: First official MCP extension; stable 2026-01-26.
+- [MCP Apps](https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/): MCP servers render interactive UI inside the host chat. Backed by Anthropic, OpenAI. MCP project (AAIF). Status: First official MCP extension; stable 2026-01-26; ext-apps v2.1.0 (Nov 10, 2026) adds WebMCP bridge.
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk): ChatGPT in-chat apps built on MCP. Backed by OpenAI. OpenAI. Status: Production; fed into MCP Apps.
 - [A2UI](https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences): Lets agents describe interactive interfaces that apps render with native components. Backed by Google. Google (open source). Status: First stable version v1.0 released Nov 11, 2026.
 - [AG-UI](https://docs.ag-ui.com/spec/1.0): Connects agents to user-facing apps through a typed event stream for messages, tool calls and state. Backed by CopilotKit, Microsoft, AWS. CopilotKit-led AG-UI project. Status: v1.0 stable Sep 18, 2026; v1.1 draft.
@@ -69,6 +69,7 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 - [Agent Name Service (ANS)](https://ansinfo.ai/docs/): Uses DNS and certificates to name, discover and verify AI agents. Backed by GoDaddy, Cisco, Cloudflare, DigiCert, Salesforce. Linux Foundation. Status: Draft specs; Linux Foundation project since Nov 10, 2026.
 - [SPIFFE/SPIRE for agent workloads](https://spiffe.io): Cryptographic workload identity that agent-auth drafts build on. Backed by CNCF. CNCF. Status: CNCF graduated; cited by WIMSE AIMS WG draft-01 (Nov 2, 2026).
 - [Agent Auth (AAuth)](https://openid.net/wg/aauth/): OpenID Foundation protocol for agent identity, delegation, and cross-domain authorization with human oversight. Backed by OpenID Foundation. OpenID Foundation. Status: Working Group launched Nov 24, 2026; initial AAuth Protocol drafts proposed.
+- [Open Delegation and Identity Standard (ODIS)](https://github.com/cosai-oasis/ws4-odis): Vendor-neutral architecture for cryptographic agent identity, scoped and cascaded delegation, revocation and audit on top of OAuth, OIDC, SPIFFE and SCIM. Backed by CoSAI, NVIDIA. CoSAI (OASIS Open Project), Workstream 4. Status: Unapproved contributor draft; repo opened Jul 15, 2026, last updated Sep 8, 2026.
 
 ## Web and content
 
@@ -116,6 +117,7 @@ The core every major vendor supports: Model Context Protocol (MCP), Agent2Agent 
 - [OWASP Agent Control Standard (ACS)](https://github.com/GenAI-Security-Project/agent-control-standard): JSON-RPC wire protocol, trace schema and AgBOM profile for runtime policy enforcement on AI agent actions. Backed by OWASP. OWASP GenAI Security Project. Status: Spec v0.1.0; release 0.1.5 published Nov 20, 2026.
 - [Docker Sandbox Kit Specification](https://github.com/docker/sandbox-kit-spec): OCI image specification for packaging an AI agent, its tools and declared runtime permissions in a single verifiable artifact. Backed by Docker, CNCF, AWS, Datadog, Palo Alto Networks, Snyk. Docker (proposed to CNCF). Status: Experimental v3 (v3.0.0-m.14 released Nov 26, 2026); final planned Q4 2026.
 - [OWASP AI Security Verification Standard (AISVS)](https://github.com/OWASP/AISVS): Structured catalogue of testable security verification requirements across 12 chapters covering models, RAG, agents and MCP. Backed by OWASP. OWASP. Status: v1.01 stable (Oct 16, 2026); 1.02 in development.
+- [ISO/IEC 27090:2026](https://webstore.iec.ch/en/publication/117332): Guidance on understanding, detecting and mitigating security threats and compromises specific to AI systems across their life cycle. Backed by ISO, IEC. ISO/IEC JTC 1/SC 27. Status: Published Oct 14, 2026 (Edition 1).
 
 ## More
 
